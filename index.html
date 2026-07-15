@@ -211,7 +211,11 @@
     <h2 class="section-title">Want to play? Sponsor? Partner?</h2>
     <p class="lead">Tell us what you're thinking. We read every message.</p>
 
-    <form action="https://formspree.io/f/REPLACE_ME" method="POST" class="contact-form" id="contact-form">
+    <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" id="contact-form">
+      <!-- Web3Forms: paste your access key below. Get it free at web3forms.com using rob@diabeticsdoingthings.com -->
+      <input type="hidden" name="access_key" value="a4f38d9b-bbe8-453f-81b1-1bf4e2c5899f" />
+      <input type="hidden" name="subject" value="New message from diabeteslegends.org" />
+      <input type="hidden" name="from_name" value="Diabetes Legends Website" />
       <div class="form-row">
         <label>
           <span>Name</span>
@@ -238,7 +242,7 @@
         <span>Message</span>
         <textarea name="message" rows="5" required></textarea>
       </label>
-      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" />
       <button type="submit" class="btn btn-primary btn-block">Send Message</button>
       <p class="form-note">Messages go to rob@diabeticsdoingthings.com. We typically reply within 2 business days.</p>
     </form>

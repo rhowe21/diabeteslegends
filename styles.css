@@ -332,6 +332,10 @@ h3 { font-size: clamp(22px, 2.4vw, 30px); }
 }
 .contact-form textarea { resize: vertical; }
 .form-note { font-size: 14px; color: #666; margin: 4px 0 0; text-align: center; }
+.form-note.form-error { color: #c0392b; font-weight: 600; }
+.form-success-panel { text-align: center; padding: 32px 8px; }
+.form-success-panel h3 { font-size: 24px; margin: 0 0 8px; color: var(--orange); }
+.form-success-panel p { color: #555; margin: 0; }
 
 /* === Footer === */
 .site-footer {
