@@ -80,6 +80,10 @@
       if (!s.inventory[k]) s.inventory[k] = { count: null, expiry: null };
     });
     if (s.trip === undefined) s.trip = null;
+    if (!s.labels) s.labels = {};
+    ['site', 'sensor'].forEach(function (k) {
+      if (!s.labels[k]) s.labels[k] = [];
+    });
     if (s.settings && (s.settings.leadDays == null || isNaN(s.settings.leadDays))) {
       s.settings.leadDays = 14;
     }
@@ -525,27 +529,32 @@
 
   // ---- Photo handling ----------------------------------------------------------
 
-  incPhoto.addEventListener('change', function () {
-    var file = incPhoto.files && incPhoto.files[0];
-    if (!file) return;
+  function resizeImage(file, maxDim, quality, cb) {
     var reader = new FileReader();
     reader.onload = function () {
       var img = new Image();
       img.onload = function () {
-        var maxDim = 900;
         var scale = Math.min(1, maxDim / Math.max(img.width, img.height));
         var canvas = document.createElement('canvas');
         canvas.width = Math.round(img.width * scale);
         canvas.height = Math.round(img.height * scale);
         canvas.getContext('2d').drawImage(img, 0, 0, canvas.width, canvas.height);
-        pendingPhoto = canvas.toDataURL('image/jpeg', 0.72);
-        incPhotoPreview.src = pendingPhoto;
-        incPhotoPreview.hidden = false;
+        cb(canvas.toDataURL('image/jpeg', quality));
       };
       img.onerror = function () { alert('Could not read that image.'); };
       img.src = reader.result;
     };
     reader.readAsDataURL(file);
+  }
+
+  incPhoto.addEventListener('change', function () {
+    var file = incPhoto.files && incPhoto.files[0];
+    if (!file) return;
+    resizeImage(file, 900, 0.72, function (dataUrl) {
+      pendingPhoto = dataUrl;
+      incPhotoPreview.src = dataUrl;
+      incPhotoPreview.hidden = false;
+    });
   });
 
   var photoViewer = $('photo-viewer');
@@ -703,6 +712,93 @@
       var kind2 = expInput.getAttribute('data-inv-exp');
       state.inventory[kind2].expiry = expInput.value || null;
       if (save()) { renderStash(); renderTrip(); }
+    }
+  });
+
+  // ---- Lot & serial photo vault ------------------------------------------------------
+
+  var labelsRowsEl = $('labels-rows');
+
+  function renderLabels() {
+    labelsRowsEl.innerHTML = ['site', 'sensor'].map(function (kind) {
+      var k = KINDS[kind];
+      var entries = state.labels[kind];
+      var grid;
+      if (entries.length === 0) {
+        grid = '<p class="label-empty">No photos yet — add the box label for your ' +
+          escapeHtml(k.stashLabel.toLowerCase()) + '.</p>';
+      } else {
+        grid = '<div class="label-grid">' + entries.map(function (en) {
+          return '<div class="label-item">' +
+            '<img src="' + en.photo + '" alt="Box label photo" data-photo="1" />' +
+            '<button class="label-del" data-label-del="' + en.id + '" aria-label="Delete photo">&times;</button>' +
+            '<input type="text" class="label-note" data-label-note="' + en.id + '" placeholder="Lot / SN note" value="' + escapeHtml(en.note || '') + '" />' +
+            '</div>';
+        }).join('') + '</div>';
+      }
+      return '<div class="label-group">' +
+        '<div class="label-head"><span class="inv-name">' + escapeHtml(k.stashLabel) + '</span>' +
+        '<button class="linklike" data-label-add="' + kind + '">+ Add photo</button></div>' +
+        grid +
+        '<input type="file" accept="image/*" hidden data-label-file="' + kind + '" />' +
+        '</div>';
+    }).join('');
+  }
+
+  function labelEntryById(id) {
+    var all = state.labels.site.concat(state.labels.sensor);
+    for (var i = 0; i < all.length; i++) {
+      if (all[i].id === id) return all[i];
+    }
+    return null;
+  }
+
+  labelsRowsEl.addEventListener('click', function (e) {
+    var t = e.target;
+    if (t.dataset.photo) {
+      photoViewerImg.src = t.src;
+      photoViewer.hidden = false;
+      return;
+    }
+    var addBtn = t.closest('[data-label-add]');
+    if (addBtn) {
+      var kind = addBtn.getAttribute('data-label-add');
+      labelsRowsEl.querySelector('[data-label-file="' + kind + '"]').click();
+      return;
+    }
+    var delBtn = t.closest('[data-label-del]');
+    if (delBtn) {
+      if (!confirm('Delete this label photo?')) return;
+      var id = delBtn.getAttribute('data-label-del');
+      ['site', 'sensor'].forEach(function (k) {
+        state.labels[k] = state.labels[k].filter(function (en) { return en.id !== id; });
+      });
+      if (save()) renderLabels();
+    }
+  });
+
+  labelsRowsEl.addEventListener('change', function (e) {
+    var fileInput = e.target.closest('[data-label-file]');
+    if (fileInput) {
+      var kind = fileInput.getAttribute('data-label-file');
+      var file = fileInput.files && fileInput.files[0];
+      if (!file) return;
+      // Keep enough resolution that the small lot/serial print stays readable.
+      resizeImage(file, 1100, 0.76, function (dataUrl) {
+        var entry = { id: newId(), photo: dataUrl, note: '', addedAt: Date.now() };
+        state.labels[kind].push(entry);
+        if (!save()) { state.labels[kind].pop(); return; }
+        renderLabels();
+      });
+      return;
+    }
+    var noteInput = e.target.closest('[data-label-note]');
+    if (noteInput) {
+      var entry2 = labelEntryById(noteInput.getAttribute('data-label-note'));
+      if (entry2) {
+        entry2.note = noteInput.value.trim();
+        save();
+      }
     }
   });
 
@@ -1049,6 +1145,7 @@
     renderCard('site');
     renderCard('sensor');
     renderStash();
+    renderLabels();
     renderTrip();
     renderHistory();
     renderSettings();
