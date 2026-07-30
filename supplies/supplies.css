@@ -190,6 +190,81 @@ button { font-family: inherit; cursor: pointer; }
 .status-card .linklike { align-self: center; }
 .status-empty { color: var(--muted); font-size: 14px; margin: 0 0 16px; }
 
+/* === Stash (inventory) === */
+.inv-row { padding: 16px 0; border-top: 1px solid var(--card-line); }
+.inv-row:first-child { border-top: 0; padding-top: 4px; }
+.inv-head { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; flex-wrap: wrap; margin-bottom: 10px; }
+.inv-name { font-weight: 700; font-size: 14.5px; color: #eee; }
+.inv-product { font-size: 12.5px; color: var(--muted); }
+.inv-counter { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+.inv-btn {
+  width: 42px; height: 42px;
+  border-radius: 8px;
+  border: 1px solid #3a3a3a;
+  background: #0f0f0f;
+  color: #eee;
+  font-size: 22px; line-height: 1;
+  transition: all .15s ease;
+}
+.inv-btn:hover { border-color: var(--orange); color: var(--orange); }
+.inv-count {
+  width: 76px;
+  text-align: center;
+  padding: 10px 6px;
+  border: 1px solid var(--card-line);
+  border-radius: 8px;
+  background: #0f0f0f;
+  color: #fff;
+  font-size: 19px; font-weight: 700;
+  font-family: inherit;
+  color-scheme: dark;
+  -moz-appearance: textfield;
+}
+.inv-count::-webkit-outer-spin-button, .inv-count::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+.inv-count:focus { outline: none; border-color: var(--orange); }
+.inv-onhand { font-size: 13px; color: var(--muted); }
+.inv-forecast { margin: 0 0 8px; font-size: 13.5px; color: #ccc; }
+.inv-forecast strong { color: #fff; }
+.inv-forecast .pill { margin-right: 4px; }
+.inv-forecast.muted-line { color: var(--muted); }
+.inv-forecast.inv-warn { color: var(--soon); }
+.inv-expiry { margin: 4px 0 0; }
+.inv-expiry input { max-width: 210px; }
+.inv-row .linklike { padding: 6px 0 0; }
+
+/* === Trip planner === */
+.trip-note { font-size: 13.5px; color: var(--muted); margin: 0 0 10px; }
+.trip-line {
+  padding: 11px 13px;
+  background: #0f0f0f;
+  border: 1px solid var(--card-line);
+  border-radius: 6px;
+  margin-bottom: 8px;
+  font-size: 13.5px; color: #ccc;
+}
+.trip-line strong { color: #fff; }
+.trip-line .warn { color: var(--soon); }
+.trip-line .bad { color: var(--over); }
+.checklist { list-style: none; margin: 12px 0 0; padding: 0; }
+.checklist label {
+  display: flex; align-items: center; gap: 12px;
+  padding: 10px 4px;
+  font-size: 14px; color: #ddd;
+  border-bottom: 1px solid #1f1f1f;
+  cursor: pointer;
+}
+.checklist li:last-child label { border-bottom: 0; }
+.checklist input[type="checkbox"] {
+  width: 19px; height: 19px;
+  accent-color: var(--orange);
+  flex-shrink: 0;
+}
+.checklist input:checked + span { color: #777; text-decoration: line-through; }
+
+/* === Site location === */
+.status-loc { font-size: 13px; color: var(--muted); margin: -6px 0 14px; }
+.loc-hint { margin: 8px 0 0; font-size: 13px; color: var(--soon); }
+
 /* === Call-prep + settings cards === */
 details.card summary {
   font-weight: 700; font-size: 15px;

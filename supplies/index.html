@@ -77,6 +77,28 @@
 
     <button class="btn btn-ghost btn-block both-btn" id="log-both">I changed both at the same time</button>
 
+    <section class="card stash-section">
+      <h2 class="card-heading">Your stash</h2>
+      <p class="muted">Count your unopened spares — we’ll project when you run out and when to reorder.</p>
+      <div id="stash-rows"></div>
+    </section>
+
+    <section class="card trip-section">
+      <h2 class="card-heading">Trip planner</h2>
+      <p class="muted">Pick your dates and we’ll do the packing math.</p>
+      <div class="field-row">
+        <label class="field">
+          <span>Leaving</span>
+          <input type="date" id="trip-start" />
+        </label>
+        <label class="field">
+          <span>Back home</span>
+          <input type="date" id="trip-end" />
+        </label>
+      </div>
+      <div id="trip-output"></div>
+    </section>
+
     <details class="card call-card">
       <summary>Before you call for a replacement</summary>
       <div class="call-body">
@@ -109,7 +131,11 @@
           <span>Sensor</span>
           <select id="settings-sensor"></select>
         </label>
-        <p class="fine">Applies to changes you log from now on — your history keeps the product you were wearing at the time.</p>
+        <label class="field">
+          <span>Reorder lead time (days)</span>
+          <input type="number" id="settings-lead" min="3" max="60" inputmode="numeric" />
+        </label>
+        <p class="fine">Applies to changes you log from now on — your history keeps the product you were wearing at the time. Lead time is how far before your projected run-out we flag it’s time to reorder.</p>
         <div class="settings-actions">
           <button class="btn btn-ghost" id="export-data">Export my data</button>
           <button class="btn btn-danger" id="clear-data">Erase everything</button>
@@ -133,6 +159,14 @@
       <span>When did you change it?</span>
       <input type="datetime-local" id="modal-when" />
     </label>
+
+    <div class="field" id="log-location-field" hidden>
+      <label>
+        <span class="field-label">Where’s the new site? <em>(optional)</em></span>
+        <select id="log-location"></select>
+      </label>
+      <p class="loc-hint" id="location-hint" hidden>That’s the same spot as last time — rotating helps sites heal.</p>
+    </div>
 
     <p id="modal-earlynote" class="early-note" hidden></p>
 
