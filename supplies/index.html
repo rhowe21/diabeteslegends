@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Supply Tracker — Diabetes Legends</title>
+<meta name="description" content="A companion log for your MiniMed 780G routine — track site and sensor changes, get change-day reminders, and keep failure details ready for replacement calls." />
+<meta name="theme-color" content="#0a0a0a" />
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="Supply Tracker" />
+
+<link rel="icon" type="image/png" href="../assets/logo/logo-mark.png" />
+<link rel="apple-touch-icon" href="../assets/logo/logo-mark.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="supplies.css" />
+</head>
+<body>
+
+<header class="app-header">
+  <div class="app-header-inner">
+    <a class="back-link" href="../">← diabeteslegends.org</a>
+    <div class="app-title-row">
+      <img src="../assets/logo/logo-mark.png" alt="" class="app-mark" />
+      <div>
+        <h1 class="app-title">Supply Tracker</h1>
+        <p class="app-sub">A companion log for your MiniMed 780G routine</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="app-main">
+
+  <!-- First-run setup -->
+  <section id="setup" class="card setup-card" hidden>
+    <h2 class="card-heading">Set up your supplies</h2>
+    <p class="muted">Pick what you wear. You can change this anytime in Settings.</p>
+
+    <label class="field">
+      <span>Infusion set</span>
+      <select id="setup-set"></select>
+    </label>
+
+    <label class="field">
+      <span>Sensor</span>
+      <select id="setup-sensor"></select>
+    </label>
+
+    <div class="field-row">
+      <label class="field">
+        <span>Last site change <em>(optional)</em></span>
+        <input type="datetime-local" id="setup-site-last" />
+      </label>
+      <label class="field">
+        <span>Last sensor change <em>(optional)</em></span>
+        <input type="datetime-local" id="setup-sensor-last" />
+      </label>
+    </div>
+
+    <button class="btn btn-primary btn-block" id="setup-save">Start tracking</button>
+    <p class="fine">Everything stays on this device — nothing is uploaded anywhere.</p>
+  </section>
+
+  <!-- Main tracker -->
+  <section id="tracker" hidden>
+
+    <div class="status-grid">
+      <article class="card status-card" id="card-site"></article>
+      <article class="card status-card" id="card-sensor"></article>
+    </div>
+
+    <button class="btn btn-ghost btn-block both-btn" id="log-both">I changed both at the same time</button>
+
+    <details class="card call-card">
+      <summary>Before you call for a replacement</summary>
+      <div class="call-body">
+        <p>When a set or sensor fails early, the manufacturer will usually replace it — but they ask a lot of questions. Have ready:</p>
+        <ul>
+          <li>Your <strong>pump serial number</strong> (SN on the back of the pump)</li>
+          <li>The <strong>lot number</strong> from the supply's box or wrapper</li>
+          <li><strong>When it failed</strong> and what day of wear it was on</li>
+          <li>Your <strong>blood sugar at the time</strong> (a screenshot helps)</li>
+          <li>Date of birth and the shipping address on your account</li>
+        </ul>
+        <p>Log the failure here when it happens and use <strong>Copy report</strong> in your history — everything above will be in one place.</p>
+        <p class="fine">Medtronic 24-hour technical support (US): 1-800-646-4633</p>
+      </div>
+    </details>
+
+    <section class="history-section">
+      <h2 class="section-heading">History</h2>
+      <div id="history"></div>
+    </section>
+
+    <details class="card settings-card">
+      <summary>Settings &amp; data</summary>
+      <div class="settings-body">
+        <label class="field">
+          <span>Infusion set</span>
+          <select id="settings-set"></select>
+        </label>
+        <label class="field">
+          <span>Sensor</span>
+          <select id="settings-sensor"></select>
+        </label>
+        <p class="fine">Applies to changes you log from now on — your history keeps the product you were wearing at the time.</p>
+        <div class="settings-actions">
+          <button class="btn btn-ghost" id="export-data">Export my data</button>
+          <button class="btn btn-danger" id="clear-data">Erase everything</button>
+        </div>
+      </div>
+    </details>
+
+  </section>
+</main>
+
+<footer class="app-footer">
+  <p>Built by the Diabetes Legends Foundation community. Not medical advice, and not affiliated with Medtronic or Abbott — talk to your care team about your therapy.</p>
+</footer>
+
+<!-- Log / details modal -->
+<div class="modal-backdrop" id="modal" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <h2 id="modal-title" class="card-heading">Log a change</h2>
+
+    <label class="field" id="modal-when-field">
+      <span>When did you change it?</span>
+      <input type="datetime-local" id="modal-when" />
+    </label>
+
+    <p id="modal-earlynote" class="early-note" hidden></p>
+
+    <div id="incident-form" hidden>
+      <label class="field">
+        <span>What happened?</span>
+        <select id="inc-reason"></select>
+      </label>
+      <label class="field">
+        <span>Blood sugar at the time (mg/dL)</span>
+        <input type="number" id="inc-bg" inputmode="numeric" min="20" max="900" placeholder="e.g. 312" />
+      </label>
+      <div class="field-row">
+        <label class="field">
+          <span>Lot #</span>
+          <input type="text" id="inc-lot" placeholder="On the box or wrapper" />
+        </label>
+        <label class="field">
+          <span>Serial / REF</span>
+          <input type="text" id="inc-serial" placeholder="Optional" />
+        </label>
+      </div>
+      <label class="field">
+        <span>Notes</span>
+        <textarea id="inc-notes" rows="3" placeholder="What you saw, alarms, anything else"></textarea>
+      </label>
+      <label class="field photo-field">
+        <span>Photo / BG screenshot</span>
+        <input type="file" id="inc-photo" accept="image/*" />
+        <img id="inc-photo-preview" alt="Attached photo preview" hidden />
+      </label>
+    </div>
+
+    <div class="modal-actions">
+      <button class="btn btn-primary" id="modal-save">Log it</button>
+      <button class="btn btn-ghost" id="modal-cancel">Cancel</button>
+    </div>
+    <button class="linklike" id="modal-skip" hidden>Skip the details — just log the change</button>
+  </div>
+</div>
+
+<!-- Photo viewer -->
+<div class="photo-viewer" id="photo-viewer" hidden>
+  <button class="photo-viewer-close" aria-label="Close">&times;</button>
+  <img alt="Attached photo" />
+</div>
+
+<script src="supplies.js" defer></script>
+</body>
+</html>
