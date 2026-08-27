@@ -34,71 +34,60 @@ Caveat on the check itself: the command `launchctl print ... | head -5 || echo
 empty input so the `||` never fires. Use `launchctl list | grep -i
 ai-content-filer` instead, which also shows the last exit code.
 
-## DIAGNOSIS COMPLETE: the iMac instance is dead; a second, healthy instance is doing the work
+## RESOLVED: the filer runs on the Mac mini (howe-agent)
 
-### The iMac instance is dead, and the cause is certain
-Verified 27 Aug:
+    host      howe-agent (Mac mini)
+    pid       52038
+    label     com.rhv.ai-content-filer      <- NOT com.robhowe.ai-content-filer
+    entry     listener.js                   <- NOT under ~/ai-content-filer/
+    moved     23 Aug, off the iMac
 
-    launchctl list | grep -i ai-content-filer   ->  (no output, service not loaded)
-    ls -l ~/.gstack/browse-states/              ->  total 8, no instagram.json
-    echo "say OK" | claude -p                   ->  OK
-    claude --version                            ->  2.1.139
-    filer.log last written                      ->  Aug 23 07:50
+Confirmed running in exactly one place. iMac plist is `.disabled` (deliberate,
+reversible); MacBook not running. **There is no double-filing.**
 
-**Claude is healthy.** That eliminates usage limits and expired CLI auth, the two
-leading hypotheses. The cause is the Instagram session: the state file is gone
-from `~/.gstack/browse-states/`, and the log says so in plain English.
+Mini setup, for reference: Node deps rebuilt for Intel, `bun` on PATH, an
+Intel-compiled gstack `browse` binary, x64 Chromium, and an Instagram session
+imported from the MacBook's Chrome.
 
-The failure chain reads straight off the error sequence:
+### Correcting the earlier entries in this file
+Every "filer is dead / host unidentified" conclusion above was wrong, for two
+mechanical reasons:
+- the checks looked for `~/ai-content-filer/filer.log`, but the mini's install is
+  not at that path;
+- the checks grepped for the label `com.robhowe.ai-content-filer`, but the mini
+  registers as `com.rhv.ai-content-filer`.
 
-    Could not parse a title/summary from Claude output       (Threads post)
-    Instagram post is age-restricted or private              (bot account can't view)
-    Instagram session is logged out - re-run the one-time login   x2
-    claude exited 1:                                         x3, same URL retried
+Both came back empty on a machine that was working. The stale iMac log and the
+`claude exited 1` failures were the *reason for the 23 Aug move*, not a live
+problem — and the timeline matches exactly: iMac log ends 23 Aug 07:50, filing
+continues uninterrupted from the mini 24-26 Aug.
 
-Session expired, so the browse step failed, so the claude subprocess exited 1
-with no usable stderr. The same URL (DcSZ2FNDayc) was retried three times — there
-is **no dead-letter handling**, so one poisoned item can block the queue.
+The inference that held up was the data one: 9 rows filed 24-26 Aug with cover
+images attached meant a healthy instance with a working Instagram session existed
+somewhere. That was correct; only the search was wrong.
 
-Total health over the log's life: 363 successes, 8 failures.
+### What this changes for the build
+Target host is the **Mac mini**, service `com.rhv.ai-content-filer`, entry
+`listener.js`. Do not patch the iMac copy — it is disabled and superseded.
 
-### A second instance exists, is healthy, and is unidentified
-9 rows were created 24-26 Aug, after the iMac went silent. All 9 carry the
-filer's exact output signature, and **all 9 have cover images attached** — versus
-186 of 270 (69%) of older rows. Fetching an Instagram cover requires a working
-Instagram session, which the iMac does not have. So this is machine output from
-a healthy install, not hand-entry and not the iMac.
+The "find and stop the mystery instance first" step is no longer needed.
+Sequence is now simply: confirm the account, then apply capture changes on the mini.
 
-Eliminated as the host:
+### One risk to close before the backfill
+The mini's Instagram session was imported from the MacBook's Chrome, so the
+filer is currently browsing as whichever account was logged in there — most
+likely Rob's personal account. That is exactly the exposure this spec warns
+about: automated third-party collection running on an account with 22,146
+followers to lose.
 
-    STERLINGs-iMac    service not loaded, no process, no log since Aug 23,
-                      IG session file missing
-    robsmacmini       ~/ai-content-filer does not exist
-    MacBook-Pro-10    ~/ai-content-filer does not exist
-    Claude Routines   8 routines exist; none write to this database
-                      (closest are Daily IG Post Idea -> Daily Post Ideas, and
-                      DDT Growth Agent -> RH Content Ideas)
+Switch it to the burner (`@agency.rob`) before the 279-item backfill, which is
+far more request-dense than the trickle of live filing.
 
-Two candidates remain:
-1. **Cowork desktop app scheduled tasks.** The Routines API states plainly that
-   locally-stored Cowork tasks do not appear in its listing. This is the leading
-   candidate precisely because it is invisible to every check run so far.
-2. **An unchecked host or user account.** All three checks ran as a single user
-   per machine (`recreationdallas`, `robsmacmini`, `robhowe`). A different user
-   on any of those boxes, or a fourth Mac, would not have been seen.
+### Useful next command
+    ssh howe-agent 'ps -o command= -p 52038; launchctl print gui/$(id -u)/com.rhv.ai-content-filer 2>/dev/null | grep -iE "program|path|working"'
 
-### Good news for the rebuild
-The iMac install is intact — `src/`, `routes.json`, `check-setup.js`,
-`package.json`, the plist, and **`backfill.js` (16 Jul)** are all present. Only
-the launchd service and the Instagram session are missing. A `backfill.js`
-already existing means step 4 of this spec has a starting point rather than
-needing to be written from scratch.
-
-Recommended sequence, in order:
-1. Find and stop the mystery instance. Restoring the iMac first would recreate
-   the exact double-filing that produced the June duplicates.
-2. Log the iMac in as the burner account, save session state, reload the service.
-3. Then apply the capture changes to that single canonical instance.
+That returns the real install directory and log path on the mini, which is what
+the capture patch needs.
 
 ## What is and is not blocking us
 
