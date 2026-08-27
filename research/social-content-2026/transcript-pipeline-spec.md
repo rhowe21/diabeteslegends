@@ -83,11 +83,28 @@ followers to lose.
 Switch it to the burner (`@agency.rob`) before the 279-item backfill, which is
 far more request-dense than the trickle of live filing.
 
-### Useful next command
-    ssh howe-agent 'ps -o command= -p 52038; launchctl print gui/$(id -u)/com.rhv.ai-content-filer 2>/dev/null | grep -iE "program|path|working"'
+### Confirmed paths on the mini
+    plist          /Users/robsmacmini/Library/LaunchAgents/com.rhv.ai-content-filer.plist
+    working dir    /Users/robsmacmini/Projects/ai-content-filer
+    entry          src/listener.js
+    node           /usr/local/bin/node   (Intel)
+    log            /Users/robsmacmini/agents/logs/ai-content-filer.log
+                   (stdout and stderr share one file)
+    launchd        keepalive | runatload | inferred program
 
-That returns the real install directory and log path on the mini, which is what
-the capture patch needs.
+`keepalive` explains the 322 Slack reconnects in the iMac log — launchd was
+restarting after every crash.
+
+The log sits in `~/agents/logs/` alongside `load-watch.log`, the same directory
+the Howe Family MacMini Agent session works in. That agent is the natural
+executor for the patch. It also explains why every check against
+`~/ai-content-filer/filer.log` came back empty.
+
+Restart after changes:
+
+    launchctl kickstart -k gui/$(id -u)/com.rhv.ai-content-filer
+
+The executable step-1 brief is in `capture-patch-brief.md`.
 
 ## What is and is not blocking us
 
