@@ -70,24 +70,38 @@ the 2.1.24x range, so that install is roughly a hundred versions behind. An old
 CLI failing against a changed server-side contract is a plausible cause of
 `claude exited 1` with an empty stderr.
 
+### Where the filer is NOT
+Checked 27 Aug, all three known Macs:
+
+    STERLINGs-iMac      filer.log exists, last written Aug 23 07:50
+    robsmacmini         no ~/ai-content-filer/filer.log
+    MacBook-Pro-10      no ~/ai-content-filer/filer.log
+
+### But the filer is definitely still running
+All 9 rows created 24-26 Aug carry the filer's exact output signature
+(`Hook:` / `Format:` / `Takeaway:`), identical to the other 270 rows. That is
+machine output, not hand-entry. So the process is alive somewhere and simply is
+not writing to the iMac log path any more.
+
+Three candidates: the service is running on the iMac but its plist now points
+StandardOutPath somewhere else (a `ai-content-filer-fixes.tgz` was applied on
+17 Jul); it rotated to a new log file; or it runs on a host not yet checked.
+
+Note the one command we have never actually got output from, because zsh ate it
+both times: `launchctl list | grep -i ai-content-filer` on the iMac.
+
 ### Commands to finish the diagnosis
-zsh does NOT treat `#` as a comment interactively, and a trailing `?` in a
-comment glob-fails and aborts the whole line. Run these with no inline comments.
+No inline comments. A trailing `?` in a zsh comment glob-fails and kills the line.
 
 On the iMac:
 
-    launchctl list | grep -i ai-content-filer
-    grep '❌' ~/ai-content-filer/filer.log | tail -10
-    head -1 ~/ai-content-filer/filer.log
-    tail -1 ~/ai-content-filer/filer.log
-    echo "say OK" | claude -p 2>&1 | head -20
-    ls -l ~/.gstack/browse-states/
+    ps aux | grep -i filer | grep -v grep
+    launchctl list | grep -i filer
+    ls -lt ~/ai-content-filer/ | head -20
+    find ~ -name "*.log" -newermt 2026-08-24 -not -path "*/node_modules/*" 2>/dev/null | head -20
 
-On the MacBook Pro, to find the second instance:
-
-    launchctl list | grep -i ai-content-filer
-    ls -l ~/ai-content-filer/filer.log
-    tail -3 ~/ai-content-filer/filer.log
+`ps aux` is the decisive one — if the process is alive it prints the working
+directory and arguments, which names the real log path directly.
 
 **Do not build the capture layers until this is resolved.** Adding caption, OCR
 and ASR steps while an unknown number of instances file into the same databases
