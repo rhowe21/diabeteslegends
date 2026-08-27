@@ -62,28 +62,43 @@ is **no dead-letter handling**, so one poisoned item can block the queue.
 
 Total health over the log's life: 363 successes, 8 failures.
 
-### A second instance exists and is healthy
+### A second instance exists, is healthy, and is unidentified
 9 rows were created 24-26 Aug, after the iMac went silent. All 9 carry the
 filer's exact output signature, and **all 9 have cover images attached** — versus
-only 186 of 270 (69%) of older rows. Downloading an Instagram cover requires a
-working Instagram session, which the iMac does not have.
+186 of 270 (69%) of older rows. Fetching an Instagram cover requires a working
+Instagram session, which the iMac does not have. So this is machine output from
+a healthy install, not hand-entry and not the iMac.
 
-So this is not a race between two filers. The iMac instance died and something
-else with its own working IG session has been carrying the load since 23 Aug,
-and doing a more complete job than the historical average.
+Eliminated as the host:
 
-That instance is not on robsmacmini or MacBook-Pro-10 (neither has the directory).
-**Its host is still unidentified.**
+    STERLINGs-iMac    service not loaded, no process, no log since Aug 23,
+                      IG session file missing
+    robsmacmini       ~/ai-content-filer does not exist
+    MacBook-Pro-10    ~/ai-content-filer does not exist
+    Claude Routines   8 routines exist; none write to this database
+                      (closest are Daily IG Post Idea -> Daily Post Ideas, and
+                      DDT Growth Agent -> RH Content Ideas)
 
-### Why this matters for the build
-Patching the iMac would be patching a corpse. The caption/OCR/ASR changes must go
-on the live instance. Identifying its host is the blocking prerequisite.
+Two candidates remain:
+1. **Cowork desktop app scheduled tasks.** The Routines API states plainly that
+   locally-stored Cowork tasks do not appear in its listing. This is the leading
+   candidate precisely because it is invisible to every check run so far.
+2. **An unchecked host or user account.** All three checks ran as a single user
+   per machine (`recreationdallas`, `robsmacmini`, `robhowe`). A different user
+   on any of those boxes, or a fourth Mac, would not have been seen.
 
-Two useful side-findings for the build:
-- The filer already distinguishes a "bot account" from Rob's own, so some burner
-  concept already exists in the code.
-- Retry-forever with no dead-letter queue is a real bug. Step 1 should add a
-  failure cap and write `Capture Status = Failed` rather than looping.
+### Good news for the rebuild
+The iMac install is intact — `src/`, `routes.json`, `check-setup.js`,
+`package.json`, the plist, and **`backfill.js` (16 Jul)** are all present. Only
+the launchd service and the Instagram session are missing. A `backfill.js`
+already existing means step 4 of this spec has a starting point rather than
+needing to be written from scratch.
+
+Recommended sequence, in order:
+1. Find and stop the mystery instance. Restoring the iMac first would recreate
+   the exact double-filing that produced the June duplicates.
+2. Log the iMac in as the burner account, save session state, reload the service.
+3. Then apply the capture changes to that single canonical instance.
 
 ## What is and is not blocking us
 
