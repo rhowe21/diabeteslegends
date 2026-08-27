@@ -15,33 +15,53 @@ rate limits partway through; without it you cannot tell what still needs doing.
 Text properties cap at 2000 chars. Long transcripts must go in the **page body**,
 with the property holding a truncated copy for at-a-glance scanning.
 
-## FIRST: confirm which machine is actually filing
+## RESOLVED: the filer runs on the Recreation iMac
 
-Known state as of 17 Jul was `STERLINGs-iMac`. Rob believes it has since moved to
-the Mac mini. This must be verified, not assumed, because **double-filing is a
-known failure mode that has already happened once.**
+Verified 27 Aug by running the check on both machines.
 
-Evidence from the library: 9 duplicate source links. Two were filed 72 seconds
-and 4 minutes apart. Four more cluster 2.2–2.6 h apart on 24 Jun — the exact day
-the filer was installed on the iMac while the laptop instance was still running.
-(The remaining two are ~7 days apart and are genuine re-saves, not bugs.)
+- **Mac mini** (`robsmacmini@howe-agent`): no launchctl output AND no log output.
+  `~/ai-content-filer/filer.log` does not exist there. The filer is not on this box.
+  The "Howe Family MacMini Agent" Claude session on it is a home-infrastructure
+  agent (`~/agents/bin/load-watch.sh`), unrelated to content filing.
+- **Recreation iMac** (`recreationdallas@STERLINGs-iMac`): live `filer.log` with
+  recent entries. **This is the filing host**, unchanged since 17 Jul.
 
-The original install notes already flagged this: "Step 3 — Cut over (prevents
-double-filing)". It was flagged and it still happened.
+No double-filing is occurring right now. The 9 historical duplicates trace to the
+24 Jun migration window when the laptop instance was still running alongside.
 
-Run on BOTH machines before changing anything:
+Caveat on the check itself: the command `launchctl print ... | head -5 || echo
+"NOT RUNNING HERE"` can never print its fallback, because `head` exits 0 even on
+empty input so the `||` never fires. Use `launchctl list | grep -i
+ai-content-filer` instead, which also shows the last exit code.
 
-    launchctl print gui/$(id -u)/com.robhowe.ai-content-filer 2>/dev/null \
-      | head -5 || echo "NOT RUNNING ON THIS MACHINE"
-    ls -la ~/ai-content-filer/filer.log 2>/dev/null
-    tail -3 ~/ai-content-filer/filer.log 2>/dev/null
+## OPEN BLOCKER: the filer appears to be failing
 
-Whichever machine shows a log with a recent timestamp is the live one. If BOTH
-are running, boot out the loser before doing anything else:
+Last three lines of `~/ai-content-filer/filer.log` as of 27 Aug:
 
-    launchctl bootout gui/$(id -u)/com.robhowe.ai-content-filer
+    [INFO] socket-mode: Going to establish a new connection to Slack ...
+    [INFO] socket-mode: Now connected to Slack
+    ❌ https://www.instagram.com/p/DcSZ2FNDayc/...: claude exited 1:
 
-Only then apply the changes below, on the surviving host.
+Reconnect → attempt one item → fail. That is a crash-restart signature.
+
+Two things make it worse than a single bad item:
+1. That URL (Matt Gray, "$100K is an architecture problem") was **already filed
+   successfully on 23 Aug**. The filer is re-processing completed work.
+2. `claude exited 1:` has an empty error string — the filer does not capture
+   claude's stderr, so failures are invisible. Nobody noticed.
+
+Newest successful row in Notion is 26 Aug 16:17, roughly 20 h before the check.
+
+Candidate causes, in rough order of likelihood: claude CLI usage limit; claude
+auth expired in the headless launchd context (this has bitten other Recreation
+cron jobs before); expired Instagram session state; CLI version drift after an
+update. `echo "say OK" | claude -p` separates the first two from the last two.
+
+**Do not build the capture layers until this is fixed** — otherwise we are adding
+caption, OCR and ASR steps to a pipeline that is crash-looping.
+
+Adding stderr capture on the `claude` invocation should be part of step 1
+regardless. A pipeline that fails silently for a day cannot be audited.
 
 ## What is and is not blocking us
 
