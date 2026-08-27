@@ -1,0 +1,662 @@
+[
+{
+"name": "Amy on Instagram: Visual footage library built with Claude",
+"summary": "Instagram creator actuallydamy (Amy) shares that the hardest part of video editing for her is remembering what's inside each raw footage file. She used Claude to transform her raw footage folder into a visual footage library featuring clip previews, notes, and a 'used' checkbox so she can track which clips have been edited into a video. She offers to share the prompt with interested viewers and tags it under #aitools, #claude, #vibecoding, and #contentcreatortips.",
+"link": "https://www.instagram.com/reel/DZQ34nCM2ih/?igsh=cWJuZjU2eGM5aDBu",
+"date": "2026-06-28"
+},
+{
+"name": "Threads post by @skydrms_",
+"summary": "A post on Threads (Meta's text-based social platform) by user @skydrms_. The content could not be retrieved as Threads requires authentication to view individual posts, and the page is not accessible to unauthenticated fetches. Without access to the actual post content, no specific details about the topic or message can be summarized.",
+"link": "https://www.threads.com/@skydrms_/post/DaIEZOfEdsj?xmt=AQG0v6TpgdFwEm9ETeivLJa119FUvFcbfJUMfRH62Kru6ERHcYdCF-Hk4Mj9esM_YN5nPaQf&slof=1",
+"date": "2026-06-28"
+},
+{
+"name": "kimani digital // QUINTY on Instagram: AI workflows running in the back of my business",
+"summary": "Instagram post from kimanidigital sharing four behind-the-scenes AI workflows to steal: using Cowork (or Codex) to auto-categorize content footage with consistent naming conventions, installing the Claude Chrome extension to turn saved posts into quarterly content schedule suggestions, building a portable AI memory system by documenting business details so you don't re-train each new tool, and being cautious about AI disclosure since research shows it can reduce trust, loyalty, and purchase intent. The throughline: AI should earn its place in the business, not be worshipped as inevitable.",
+"link": "https://www.instagram.com/p/DZdU7ZliKsx/?igsh=azZmdzM3c2c2bTZh",
+"date": "2026-06-28"
+},
+{
+"name": "AI For Work & Productivity Reel by georgiebarrat",
+"summary": "An Instagram Reel posted by georgiebarrat on June 11, 2026, shared under the 'AI For Work & Productivity' context. The post received 797 likes and 3 comments. No caption text was provided in the scraped metadata, so the specific content of the reel cannot be determined beyond its association with AI work and productivity topics.",
+"link": "https://www.instagram.com/reel/DZckdSqI9Xp/?igsh=ajBlZW42NzRkNTZ6",
+"date": "2026-06-27"
+},
+{
+"name": "Live demo at Cannes Lions: using Claude + Canva to make on-brand design assets",
+"summary": "CatGPT (askcatgpt) recaps a Cannes Lions live demo showing how to pair Canva with Claude to generate design assets that look genuinely on-brand. The key trick is feeding the AI a detailed brand guidelines deck specifying colors, fonts, and tone of voice. Claude can build that deck for you by inferring brand identity from existing Canva assets, website screenshots, emails, and similar inputs. Viewers are prompted to comment DESIGN to receive a full end-to-end tutorial on creating the brand guidelines deck.",
+"link": "https://www.instagram.com/reel/DaGljyUifHD/?igsh=MTl2OG56aGtyZW05bw==",
+"date": "2026-06-27"
+},
+{
+"name": "Claude AI Setup Tips for Content Creation",
+"summary": "Ginny Beauguillaume (@ginnyfears) shares a Claude AI setup for content creators, claiming her configuration differs from how most people use the tool. She advises against using AI to script content end-to-end, recommending it instead for brainstorming and first drafts to speed up workflow. The post promises specific settings that support this balanced approach.",
+"link": "https://www.instagram.com/p/DZcn2-gEUz5/?igsh=YjhkM2ZqaDR6encz",
+"date": "2026-06-27"
+},
+{
+"name": "24 Claude Installs That Turn It Into a Full Operations System",
+"summary": "Mariah Brunner (@itsmariahbrunner) shares an Instagram post highlighting 24 installs\u2014plugins, skills, and connectors\u2014that transform Claude into a complete operations system. Plugins add entire specialist teams, skills trigger whole workflows from a single command, and connectors integrate Claude directly with real tools. Viewers are prompted to comment '24' to receive the full setup guide and to save the post to install them one at a time.",
+"link": "https://www.instagram.com/p/DZtLLgElkG_/?igsh=cDFvdXA3bTZtem55",
+"date": "2026-06-27"
+},
+{
+"name": "Freshly Curated Website Design Inspiration",
+"summary": "Instagram reel by ninalyre (posted June 3, 2026) sharing a newly curated collection of websites intended to serve as inspiration for web design projects. The post is tagged with graphic design and web design hashtags, suggesting it's part of an ongoing series showcasing design references. Received 3,459 likes and 16 comments.",
+"link": "https://www.instagram.com/reel/DZIljzfOQo4/?igsh=MWlwYmwxNnp6eXFlMQ==",
+"date": "2026-06-26"
+},
+{
+"name": "Ashley Renders on building a Claude skill to automate video editing",
+"summary": "Ashley shares her decade-long video editing background (VICE associate producer cutting news videos, documentary trailer/rough-cut editing, then editing her own content) and explains she no longer has time for tiny cuts while running a business with a newborn. She's actively developing a Claude skill to automate as much of the editing process as possible, describing it as iterative testing with lots of back-and-forth plus filming content to edit. She references having built other custom Claude skills that saved her countless hours and asks viewers to comment 'CLAUDE' to join her mailing list for skill releases.",
+"link": "https://www.instagram.com/reel/DaB3_-xzTkt/?igsh=M3Zmc3c2a2p3M203",
+"date": "2026-06-26"
+},
+{
+"name": "How to Set Up Your Claude Cowork System from Scratch (With Prompts You Can Steal)",
+"summary": "A resource document accompanying a Tina Huang YouTube tutorial (May 2026) on building a personal AI operating system with Claude Cowork. It recommends starting with a detailed PRD as a blueprint, then layering construction: data pipelines first, then projects built on top, enabling scheduled workflows, dashboards, and on-demand skills. Covers an advanced 'autonomous builder' pattern for queueing projects that execute overnight, and stresses deliberate setup with documentation and reversibility checks to avoid common pitfalls.",
+"link": "https://resource.lonelyoctopus.com/doc/ce409140-9c5c-4923-a739-871048b339eb/",
+"date": "2026-06-26"
+},
+{
+"name": "6 Claude shortcuts brands are using to scale content production",
+"summary": "Mobile Editing Club shares 6 Claude AI shortcuts that brands use to scale content production, covering content calendar planning, repurposing, carousels, dashboards, email flows, and multi-language content. The post uses comment-gated lead magnets, asking viewers to comment 'secret' to receive the shortcuts for free or 'scale' to get a link to their full step-by-step process including image and video generation with Claude.",
+"link": "https://www.instagram.com/p/DZii9rgDSpF/?igsh=MWJjZTJmMWo5Y2tuNg==",
+"date": "2026-06-26"
+},
+{
+"name": "Kara Wang on Claude coding and video editing",
+"summary": "Instagram Reel by Kara Wang (@karawang) posted June 10, 2026, jokingly asking if it's bad that she spends all day and night 'Claude coding.' She invites her audience to share whether they've tried using Claude to edit their videos. The post received 223 likes and 34 comments.",
+"link": "https://www.instagram.com/reel/DZaLV9ktBZb/?igsh=MW9yOHl0ZmpqZDJpOA==",
+"date": "2026-06-26"
+},
+{
+"name": "30-Minute Claude Project Setup for Persistent Context",
+"summary": "Max Johnson explains how to set up a Claude Project so you don't have to re-explain context every conversation. The setup involves creating a dedicated Project, uploading three markdown files (about-me.md describing your work, my-voice.md capturing tone and writing examples, my-rules.md defining response rules), and pasting project instructions that tell Claude to read the files first, ask questions before acting, show plans, and never send/delete/publish without approval. The result is that every chat within the project understands who you are, how you communicate, and what you need.",
+"link": "https://www.instagram.com/reel/DY4geR9Mkup/?igsh=aWNjdm9seXJ6YThi",
+"date": "2026-06-26"
+},
+{
+"name": "Brand new Claude hacks for brands",
+"summary": "Mobile Editing Club shares four ways brands are using Claude to scale content production: video editing (filming, captioning, masking, and exporting to branded folders in minutes), UGC-style video creation (scripting and generating multiple tested variations with avatars before paying for production), interior design concepts (analyzing products and building cohesive styling directions for web/social/campaigns), and shoot planning (generating shot lists, prop lists, outfit notes, timing, and folders in under 15 minutes). The post argues the fastest-scaling brands aren't working harder but have better AI-powered systems, and prompts viewers to comment 'scale' for more info.",
+"link": "https://www.instagram.com/p/DZS8fMVDT4K/?igsh=cW94bGJrdnBrN2w3",
+"date": "2026-06-25"
+},
+{
+"name": "Claude Design Just Fixed Its Biggest Problem (2.0 Update)",
+"summary": "RoboNuggets walks through the Claude Design 2.0 update, which merges Claude Design and Claude Code under shared 5-hour and weekly usage limits and adds a true visual editor where you can click any element to change text, font, size, or color. New features include a Slides mode that replaces PowerPoint (full-screen present with speaker notes, .pptx export), a /design sync command in Claude Code that ports a design system into Claude Design, and a two-way handoff that lets you start a front-end in Claude Design and finish it in Claude Code with a live backend. Available now at claude.ai/design with no install required.",
+"link": "https://www.youtube.com/watch?v=JYZ7i1NFiyM",
+"date": "2026-06-25"
+},
+{
+"name": "Angela Giakas: More Favourite MacBook Hacks",
+"summary": "Instagram post by Angela Giakas (@angelagiakas) from June 14, 2026 sharing additional MacBook tips and tricks she likes using. The post is sponsored, with the MacBook provided by Apple, and tags @apple. It received around 10K likes and 83 comments at the time of scraping.",
+"link": "https://www.instagram.com/p/DZj4qe_D8Fx/?igsh=MXFoYXhpOHNleWhi",
+"date": "2026-06-25"
+},
+{
+"name": "Why is nobody talking about this opportunity",
+"summary": "Instagram Reel posted by @trymaven (Maven) on May 21, 2026, teasing an under-discussed opportunity with the hook 'Why is nobody talking about this opportunity\u2026\ud83e\udd2f'. The post garnered significant engagement with 8,257 likes and 1,843 comments. No further substantive details about the opportunity itself are provided in the available metadata.",
+"link": "https://www.instagram.com/reel/DYoABf-gQ3U/?igsh=NW9sdnRsYmgwa3l5",
+"date": "2026-06-25"
+},
+{
+"name": "Notion announces Claude agents integration",
+"summary": "Notion (@notionhq) announced the launch of Claude agents within Notion, allowing users to create purpose-built Claude AI agents for specific jobs like data analysis, coding, or building spreadsheets and slides. These agents live on a shared task board alongside human teammates, and can chain into workflows, hand off tasks to each other, and keep work progressing around the clock. The post (6.9K views, 161 likes) positions this as a way to embed autonomous AI collaborators directly into team workflows.",
+"link": "https://www.threads.com/@notionhq/post/DZ-bZ64EWSW?xmt=AQG0ZHJ0U-PrY7WUkjRbEGykDFNiS4aeDU3Ejrh1TfIhUFxv0u65PbBZvMGMk54T9mSfGkmZ&slof=1",
+"date": "2026-06-25"
+},
+{
+"name": "The algorithm and AI are old pals",
+"summary": "Instagram Reel by Thomas Lentine posted on April 30, 2026, with a brief caption suggesting that social media recommendation algorithms and AI systems are closely intertwined. The post received 4,236 likes and 7,269 comments, indicating the comment count significantly outpaced likes \u2014 often a signal of controversial or debate-provoking content. No further textual detail about the video's content is available from the metadata.",
+"link": "https://www.instagram.com/reel/DXx5yabMUUD/?igsh=djJnNGUzazhrd3hs",
+"date": "2026-06-25"
+},
+{
+"name": "Claude just audited my Instagram and called me out",
+"summary": "Ashley Boston shares a step-by-step method for using the Claude for Chrome extension to perform a brutally honest audit of your Instagram profile while logged in. She provides a full copy-paste prompt that has Claude act as a brand strategist evaluating the 3-second test, buyer resonance across captions, hook patterns in best/worst posts, path to buy, and top 3 ranked action items with rewrites. She adds that the bigger play is training Claude on your dream client's brain so content sounds like the buyer, not you, and invites commenters to type BRAIN for that follow-up method.",
+"link": "https://www.instagram.com/reel/DZ56fdcBldj/?igsh=MTl2ZmxiM2poMzc2cw==",
+"date": "2026-06-24"
+},
+{
+"name": "Notion's 2026 AI at Work Research: Surveying 6,000 Professionals Across 10 Markets",
+"summary": "Notion pushes back on hype-driven AI narratives (autonomous agents, mass job losses, industry-flipping disruption) that make companies feel behind. To get a grounded picture, they surveyed 6,000 professionals across 10 markets to map where AI at work actually stands. Full findings are published at ntn.so/2026-research.",
+"link": "https://www.instagram.com/p/DZ-tflPCccC/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ==",
+"date": "2026-06-24"
+},
+{
+"name": "Claude Setup Guide: 5 Steps Before You Start",
+"summary": "Instagram reel by georgiebarrat outlining a recommended Claude AI setup sequence: (1) turn off 'Help improve Claude' in Privacy settings before uploading documents, (2) connect daily tools like Gmail, Drive, and Calendar, (3) build an 'expertise brief' by letting Claude interview you about your work and voice, then save it as a reusable file, (4) install the Chrome extension (highlighting an Instagram audit feature), and (5) use Projects instead of fresh chats to retain context, files, and instructions. Post includes a comment-to-DM funnel offering a free 60-minute starter kit with prompts.",
+"link": "https://www.instagram.com/reel/DZzZFxltTK0/?igsh=MW9zaGlkYXhtbjFrNw==",
+"date": "2026-06-24"
+},
+{
+"name": "Jens Heitmann (@jens.heitmann) \u2022 Instagram photos and videos",
+"summary": "Instagram profile page for Jens Heitmann (@jens.heitmann). The account has 57K followers, follows 48 accounts, and has published 39 posts. No specific post caption or content was provided in the scraped data \u2014 only profile-level metadata.",
+"link": "https://www.instagram.com/jens.heitmann?igsh=azVhbHdycDk5YTRp",
+"date": "2026-06-24"
+},
+{
+"name": "Jens Heitmann (@jens.heitmann) on Instagram",
+"summary": "Instagram profile page for Jens Heitmann (@jens.heitmann). The account has 57K followers, follows 48 accounts, and has published 39 posts. No specific post content or caption was included in the scraped data \u2014 only profile-level metadata.",
+"link": "https://www.instagram.com/jens.heitmann?igsh=azVhbHdycDk5YTRp",
+"date": "2026-06-24"
+},
+{
+"name": "Jens Heitmann: 3 Claude Code features for small businesses in 2026",
+"summary": "Jens Heitmann highlights three under-the-radar 2026 Claude Code releases for SMBs. (1) Claude for Small Business bundles 15 prebuilt skills and 15 agentic workflows for finance, ops, sales, and marketing (reconciliation, invoicing, follow-up), shipped inside Claude Cowork at no extra cost. (2) Live Artifact sharing produces self-updating, shareable dashboards/trackers/summaries via a single link with no Claude account required for recipients. (3) Claude Code Routines run agentic skills on cloud servers on a schedule, removing the need for a VPS or a laptop left on.",
+"link": "https://www.instagram.com/reel/DZxlmowO-gN/?igsh=djEwODNuZHBodDcy",
+"date": "2026-06-24"
+},
+{
+"name": "Automate the Boring EP. 3: Claude + Instagram via Windsor.ai",
+"summary": "Laura Haleydt shares a behind-the-scenes Instagram Reel demonstrating how to connect Claude to Instagram using the Windsor.ai connector to automate business analytics. She provides a ready-to-paste prompt: 'Pull my latest Instagram insights and present it to me in a nice interactive dashboard and grid. Take my Instagram insights from the last 14 days.' The post is episode 3 of her 'automate the boring' series and racked up 430 likes and 6 comments as of June 19, 2026.",
+"link": "https://www.instagram.com/reel/DZxR9mBN9pX/?igsh=NXplNzI0dWs3eHpq",
+"date": "2026-06-24"
+},
+{
+"name": "Olivia in the City \u2014 Scheduling Claude Code tasks to avoid usage limits",
+"summary": "Instagram Reel by olivia.inthecity (posted April 2, 2026) sharing a tip for working around Claude Code's usage limits by scheduling tasks so you don't get locked out as quickly. She notes the workaround mainly extends working sessions and won't help users already hitting the weekly cap. Tagged #vibecoding #claudecode #anthropic; 1,391 likes and 26 comments.",
+"link": "https://www.instagram.com/p/DWonNYlAHlP/",
+"date": "2026-06-22"
+},
+{
+"name": "CatGPT: Claude x Manychat integration for Instagram DMs",
+"summary": "Instagram Reel by @askcatgpt (posted May 13, 2026) promoting a new Claude integration with Manychat that brings Claude AI into Instagram DMs. Viewers are prompted to comment \"MANYCHAT\" to try the Claude x Manychat integration. Tagged as a #ManychatPartner post with @manychat, the reel earned 3,402 likes and 720 comments.",
+"link": "https://www.instagram.com/p/DYTE2YSC1TR/",
+"date": "2026-06-22"
+},
+{
+"name": "How I Use Claude as My Social Media Manager to Grow IG by 10K in 3 Weeks",
+"summary": "Amie Tollefsrud (@lazymillionaire) shares that she grew her Instagram account by 10,000 followers in 3 weeks by using Claude as an automated social media manager. The system studies viral trends in her niche, analyzes her own account, and generates a personalized 7-day content calendar every week on autopilot. She offers a full article with prompts and screenshots to anyone who comments 'CONTENT CALENDAR' on the post.",
+"link": "https://www.instagram.com/p/DYQEVXoyz9M/",
+"date": "2026-06-22"
+},
+{
+"name": "Introducing Claude Opus 4.5",
+"summary": "Anthropic released Claude Opus 4.5, positioned as their best model for coding, agents, and computer use, with state-of-the-art results on SWE-bench Verified and other real-world coding benchmarks. Pricing is \\$5/\\$25 per million input/output tokens, making high-capability AI more accessible. The release adds an 'effort' parameter to control speed-versus-quality tradeoffs and ships expanded product integrations across Claude Code, desktop apps, a Chrome extension, and Excel.",
+"link": "https://www.anthropic.com/news/claude-opus-4-5",
+"date": "2026-06-22"
+},
+{
+"name": "This simple Claude Cowork system saves 5 hours a week",
+"summary": "Dylan Davis (Gradient Labs) walks through a three-level system for using Anthropic's Claude as a coworking partner to reclaim roughly five hours per week. He frames a shift in how to collaborate with Claude, then breaks the workflow into Level 1 (basic delegation), Level 2 (deeper context and reusable setups), and Level 3 (more autonomous, multi-step workflows), closing with a recap of how to layer the levels. The video is aimed at business owners and leaders who want a practical, repeatable AI cowork routine rather than ad-hoc prompting.",
+"link": "https://www.youtube.com/watch?v=W9AOkjmt-XU",
+"date": "2026-06-22"
+},
+{
+"name": "How I Built an AI Social Media Manager with Claude Code",
+"summary": "A walkthrough of building an AI-powered social media manager using Claude Code (Anthropic's agentic coding CLI). The creator demonstrates how to scaffold and automate a tool that handles social media tasks \u2014 likely covering content generation, scheduling, and workflow automation \u2014 by orchestrating Claude Code as the implementation engine. Useful as a reference for using Claude Code to build practical AI agents for marketing/social workflows.",
+"link": "https://www.youtube.com/watch?v=CeJAGpP3XGs",
+"date": "2026-06-22"
+},
+{
+"name": "Ibra AI \u2014 Claude Code Content Workflow",
+"summary": "Instagram reel from ibraviz.ai promoting a Claude Code-based content creation workflow. Viewers are prompted to comment 'Content' to receive the workflow. Tagged with #claudecode, #vibecoding, #claude, and #ai, suggesting it demonstrates an AI-assisted content production process.",
+"link": "https://www.instagram.com/reel/DZfpRbxsUZv/",
+"date": "2026-06-22"
+},
+{
+"name": "Mariah Brunner \u2014 Anthropic Head of Sales' Claude Cowork Playbook",
+"summary": "Mariah Brunner shares three sales plays from Anthropic's head of sales using Claude Cowork. The tactics include scheduling morning call prep briefs, auto-building weekly forecasts every Friday to save three hours, and using a rubric to score every account in your book overnight. Viewers are invited to comment 'sales' to receive the rubric and prompts.",
+"link": "https://www.instagram.com/reel/DY1yfMTh3wa/",
+"date": "2026-06-22"
+},
+{
+"name": "Jens Heitmann \u2014 Claude Code as a Content Mentor",
+"summary": "Jens Heitmann shares how to turn Claude Code into a personal content mentor that studies top creators in your niche and audits your own scripts and videos. The workflow pulls posts across your platforms, identifies what the best creators do differently, and turns those findings into specific, actionable direction for improving your content. He promises viewers will uncover something new about their content and walks through his exact process.",
+"link": "https://www.instagram.com/reel/DZ3BEGbyaii/",
+"date": "2026-06-22"
+},
+{
+"name": "Turn Claude Code into your Content Mentor",
+"summary": "Instagram Reel by @jens.heitmann demonstrating a Claude Code-based workflow that acts as a content mentor. The system studies top teachers in your niche, aggregates posts across platforms, audits your scripts and videos, and identifies patterns from top-performing creators to surface actionable improvements. Pitched as a way to reveal content insights you weren't previously aware of. Tagged #claudecode #ai #aitools #vibemarketing.",
+"link": "https://www.instagram.com/reel/DZ3BEGbyaii/",
+"date": "2026-06-22"
+},
+{
+"name": "Instagram Reel (DY1yfMTh3wa)",
+"summary": "Instagram Reel at https://www.instagram.com/reel/DY1yfMTh3wa/. Content could not be analyzed because Instagram requires authentication to view reels and does not expose transcripts or metadata to unauthenticated fetchers. To summarize this reel, open it in a logged-in browser session or provide a transcript/description.",
+"link": "https://www.instagram.com/reel/DY1yfMTh3wa/",
+"date": "2026-06-22"
+},
+{
+"name": "Instagram Reel (DZfpRbxsUZv)",
+"summary": "An Instagram Reel video hosted at instagram.com/reel/DZfpRbxsUZv. The content could not be analyzed because Instagram Reels require authentication to access and are not supported by available transcript or video analysis tools. No transcript, caption, or metadata is retrievable without manual viewing in the Instagram app or web interface.",
+"link": "https://www.instagram.com/reel/DZfpRbxsUZv/",
+"date": "2026-06-22"
+},
+{
+"name": "Introducing Claude Opus 4.5",
+"summary": "Anthropic announced Claude Opus 4.5 on November 24, 2025, positioning it as their most capable model for coding, agents, and computer use. It achieves state-of-the-art performance on software engineering benchmarks while using fewer tokens than predecessors, priced at \\$5/\\$25 per million input/output tokens. New platform capabilities include an effort control parameter for tuning reasoning depth and improved context management for longer-running agentic tasks.",
+"link": "https://www.anthropic.com/news/claude-opus-4-5",
+"date": "2026-06-22"
+},
+{
+"name": "How I Built an AI Social Media Manager with Claude Code",
+"summary": "Ryan Doser walks through how he built an AI-powered social media manager using Anthropic's Claude Code CLI. The video covers his approach to using Claude Code as the underlying agent to automate social content workflows \u2014 likely including idea generation, drafting, scheduling, and orchestration across platforms. It's a practical build-along aimed at developers and creators interested in agentic automation for marketing tasks.",
+"link": "https://www.youtube.com/watch?v=CeJAGpP3XGs",
+"date": "2026-06-22"
+},
+{
+"name": "This simple Claude Cowork system saves 5 hours a week",
+"summary": "A walkthrough of a 'Claude Cowork' workflow \u2014 a system for pairing with Anthropic's Claude as a coworking partner to automate routine tasks and reclaim roughly five hours of work per week. The video appears to demonstrate the setup, prompts, and recurring patterns used to delegate work to Claude effectively. Aimed at productivity-focused users looking to integrate Claude into their daily workflow.",
+"link": "https://www.youtube.com/watch?v=W9AOkjmt-XU",
+"date": "2026-06-22"
+},
+{
+"name": "Andrej Karpathy Just 10x'd Everyone's Claude Code",
+"summary": "Nate Herk walks through Andrej Karpathy's method for building LLM-powered knowledge bases using nothing but markdown files and Claude Code, with Obsidian as the front end. He shows a \\~5-minute setup, demos two of his own wikis (one for YouTube transcripts and one as a personal second brain), and walks through ingesting an article, querying it, and connecting it to other projects. He closes by comparing this markdown-plus-LLM wiki approach to traditional semantic search RAG and arguing why it tends to work better for personal knowledge.",
+"link": "https://www.youtube.com/watch?v=sboNwYmH3AY",
+"date": "2026-06-22"
+},
+{
+"name": "How to Set Up Your Claude Cowork System from Scratch (With Prompts You Can Steal)",
+"summary": "Tina Huang's May 2026 guide (video plus written walkthrough and copy-paste prompts) for building a personal AI operating system on Claude Cowork. She recommends starting with a detailed PRD as the blueprint, then layering the build \u2014 establishing data pipelines first, then stacking projects like investment dashboards and morning briefs on top. The end state is a Cowork system that runs autonomously, building new software in the background while she sleeps.",
+"link": "https://resource.lonelyoctopus.com/doc/ce409140-9c5c-4923-a739-871048b339eb/",
+"date": "2026-06-22"
+},
+{
+"name": "Build a proactive agent workflow with Claude Code",
+"summary": "Anthropic's Claude channel demonstrates how to use Claude Code 'routines' to turn the agent into a proactive teammate that reads your repository and opens a pull request before you've even started your day. The walkthrough builds one routine end-to-end, covering the three key design decisions behind any routine: the trigger, the context it pulls in, and how to steer its behavior. By the end, viewers are one /schedule command away from launching their first scheduled Claude Code agent.",
+"link": "https://www.youtube.com/watch?v=eSP7PLTXNy8",
+"date": "2026-06-22"
+},
+{
+"name": "The Briefing: Enterprise Agents",
+"summary": "An Anthropic virtual event held February 24, 2026, showcasing how Claude transforms enterprise knowledge work through AI agents. Anthropic product and engineering leaders demonstrated new Cowork and Plugins capabilities, with live demos from internal finance, legal, sales, and product teams, plus a discussion with Epic's SVP on scaling AI adoption. The event targets senior leaders such as CIOs and general counsels exploring what's possible when Claude knows their work the way they do.",
+"link": "https://www.anthropic.com/events/the-briefing-enterprise-agents-virtual-event",
+"date": "2026-06-22"
+},
+{
+"name": "Claude Cowork Fundamentals In 22 Minutes",
+"summary": "Tina Huang walks through Claude's Cowork feature in a single 22-minute tutorial, progressing from setup to advanced workflows. She covers beginner-level simple automations, intermediate Cowork features, scheduled tasks, and advanced uses involving Projects, ending with a 'super advanced' end-to-end workflow. The video includes a downloadable prompts pack and is aimed at viewers who want to use Claude Cowork to automate work tasks.",
+"link": "https://www.youtube.com/watch?v=uGwDuvSqgYI",
+"date": "2026-06-22"
+},
+{
+"name": "But what is a neural network? \\| Deep learning chapter 1",
+"summary": "The first video in 3Blue1Brown's Deep Learning series, introducing neural networks through the example of recognizing handwritten digits. It explains the structure of a multilayer perceptron \u2014 input neurons for pixel values, hidden layers, and output neurons for each digit \u2014 and how weights, biases, and activation functions like sigmoid (and ReLU) determine each neuron's value. The video builds intuition for how layered abstractions could detect edges, then loops and patterns, then full digits, setting up later chapters on gradient descent and backpropagation.",
+"link": "https://www.youtube.com/watch?v=aircAruvnKk",
+"date": "2026-06-22"
+},
+{
+"name": "5 Heilmeier-style prompts to make Claude interrogate your idea before building",
+"summary": "Instagram Reel by @corecodevibes (Steffen \\| AI Engineering), posted August 16, 2026, adapting George Heilmeier's 1970s DARPA funding questions into 5 prompts that force Claude to critique an idea instead of just building it. The prompts: (1) jargon strip \u2014 explain the project in plain language a smart 12-year-old would follow; (2) status quo audit \u2014 how is this solved today and what's actually bad about it; (3) who cares test \u2014 name a specific real person who cares and what they do instead; (4) failure list \u2014 everything that must go right, ranked by likelihood of going wrong; (5) the exams \u2014 define falsifiable measurable results at week 4 and week 12. The post says most ideas die at prompt 3 and that's the point; the full 8 questions and Project setup are gated behind commenting 'DARPA' for a guide. 502 likes, 753 comments.",
+"link": "https://www.instagram.com/reel/DcHKRqcI2Yy/?igsi=ZjdsMThxdW5rczkz",
+"date": "2026-08-26"
+},
+{
+"name": "Zoe Lu on Instagram: \"my ai assistant is a cat, and my whole life runs on one claude dashboard\"",
+"summary": "Instagram post by @leadwithzoe (August 25, 2026) promoting a single Claude-based dashboard that acts as a personal AI assistant, personified as a cat avatar. She says it runs her calendar, email, personal life, and businesses, and suggests viewers pick any avatar they'd actually look at \u2014 a pet, a glowing orb, or a little robot. The post is a lead-magnet: commenters who write \"DASHBOARD\" are promised a free build guide with prompts included. It had 106 likes and 338 comments, tagged #claude #claudeai #aiassistant #momsintech #aiforbeginners.",
+"link": "https://www.instagram.com/p/Dcei0VUkotg/?img_index=3&igsi=YThoOGRoazVjbXo0",
+"date": "2026-08-25"
+},
+{
+"name": "Jessi Anderson on Instagram: how she used Claude to diagnose her account and hit 10,000 followers",
+"summary": "Instagram post (Aug 25, 2026) by @jessianderson, a \"Building in Public\" creator, describing how she stopped asking for content ideas and instead fed Claude 90 days of analytics, her top posts, her flops, her bio, and her goal, asking it to diagnose what was broken before suggesting what to make. She frames her problem as reach without conversion \u2014 over a million people saw her content the prior month but only 0.13% followed \u2014 and says she hit 10,000 followers one day later, with a single post doing most of the work. She emphasizes no marketing budget or social team, sets a next goal of 20k in two months, and uses a comment-gate CTA (\"comment 'Claude' and I'll send you the full prompt\"). Post had 221 likes and 217 comments.",
+"link": "https://www.instagram.com/p/Dcd9rSMluwT/?igsi=MWZ4cmp4MjB5OXYxeA==",
+"date": "2026-08-25"
+},
+{
+"name": "Camila Markson on Instagram: \"I just hit 750k followers on Instagram! Copy these 7 prompts to grow together!\"",
+"summary": "Instagram post by @milamarksonofficial (Camila Markson), published August 16, 2026, celebrating reaching 750k followers and sharing 7 prompts for audience growth. The creator promotes a free guide containing 62 ways she uses Claude to monetize and grow her business, offered to anyone who comments \"62WAYS\" \u2014 a standard comment-to-DM lead magnet funnel. The caption closes with an income disclaimer stating the content is educational, not a guarantee of income, and that results require effort and consistency. Engagement at time of scrape: 383 likes, 397 comments.",
+"link": "https://www.instagram.com/p/DcHEjTSCaYU/?img_index=1&igsi=MWQ1emZ4eTl2aXEzbQ==",
+"date": "2026-08-25"
+},
+{
+"name": "There is a 15 minute video from Anthropic engineer on building effective agents that teach you the fundamentals of agents.",
+"summary": "Instagram Reel by Sujay Nadkarni (@thenadcoder), an account covering AI, coding, and analytics, posted August 18, 2026. The post points followers to a 15-minute video from an Anthropic engineer that covers the fundamentals of building effective agents. It drew roughly 4,517 likes and 3,928 comments, and was tagged #ai #claude #anthropic #agents #softwareengineer.",
+"link": "https://www.instagram.com/reel/DcNKk_mDTRP/?igsi=ODV2dGNpYXA0bDZ4",
+"date": "2026-08-24"
+},
+{
+"name": "Jeremy Fleming on Instagram: \"Comment '7' for the full guide\"",
+"summary": "Instagram Reel by @email_jeremy posted on August 21, 2026, prompting viewers to comment '7' to receive a full guide (content/topic of the guide is not specified in the metadata). The post received 1,082 likes and 593 comments, indicating a lead-magnet style engagement tactic common for email list building. No further details about the guide's subject are provided in the caption.",
+"link": "https://www.instagram.com/reel/DcTmVVARe9i/?igsi=MTBtb3U5eG44cnFibA==",
+"date": "2026-08-22"
+},
+{
+"name": "Jens Heitmann: Building Anthropic-like mascot videos with Claude Code + Higgsfield MCP",
+"summary": "Jens Heitmann demonstrates using Claude Code combined with the new Higgsfield.ai MCP to turn a pixel mascot into branded marketing videos animated with Kling 3.0 and Seedance, all driven from the terminal. The Instagram Reel (posted July 4, 2026) invites viewers to comment 'MASCOT' to receive the full workflow, the associated skill, and a free Higgsfield trial to test the MCP. Tagged #ClaudeCode, #AImascot, #Claude, #HiggsfieldCreator, and #MCP.",
+"link": "https://www.instagram.com/reel/DaYsZyVyzYc/?igsi=MXhhdGV5a3liYTNoYw==",
+"date": "2026-08-21"
+},
+{
+"name": "Colton Dean \u2014 Claude Code ads playbook teaser",
+"summary": "Instagram Reel by @colton.ai.dean (posted July 29, 2026) prompting viewers to comment \"ads\" to receive a full playbook. Tagged with #claudecode, #ai, #aitips, #ads, and #googlesearch, suggesting the playbook covers using Claude Code / AI workflows for Google Search ads. Engagement: 818 likes and 1,587 comments, indicating the comment-to-DM lead magnet is driving strong response.",
+"link": "https://www.instagram.com/reel/DbYtsy6vjEk/?igsi=MW16ZnBmanJ3MHRtdw==",
+"date": "2026-08-21"
+},
+{
+"name": "Caleb Kruse: Comment \"Claude Ads\" for Claude Meta Ads Guide",
+"summary": "Instagram reel from mr.paidsocial (Caleb Kruse, focused on Ads/AI/Automation) posted August 20, 2026, offering a resource kit for using Claude to build Meta ads end-to-end. Viewers are prompted to comment \"Claude Ads\" to receive everything needed to have Claude generate Meta advertising campaigns from start to finish. The post has strong engagement with 459 likes and 1,098 comments, indicating high interest in the Claude-powered ad creation workflow.",
+"link": "https://www.instagram.com/reel/DcR6KUyPC0n/?igsi=cWc2M290ZnMzNHh0",
+"date": "2026-08-21"
+},
+{
+"name": "The Language of Vibe Coding, Explained",
+"summary": "An Andreessen Horowitz (a16z) Instagram post published on August 13, 2026 titled 'The Language of Vibe Coding, Explained.' The post appears to break down terminology associated with 'vibe coding,' a trend in AI-assisted software development. It received 1,984 likes and 10 comments at the time of scraping.",
+"link": "https://www.instagram.com/p/Db_khTJCu59/?img_index=9&igsi=MWpucTMzZHNnY21vbw==",
+"date": "2026-08-20"
+},
+{
+"name": "Kaskey Consulting: Simple file system saves hours of daily friction",
+"summary": "Instagram Reel by Kaskey Consulting posted June 8, 2026, promoting the idea that having a simple file system can eliminate hours of daily friction in household and life administration. The post is tagged with #lifeadmin, #organization, and #householdsystems, and has garnered 8,357 likes and 1,205 comments. Content focuses on household organization systems as a productivity tool.",
+"link": "https://www.instagram.com/reel/DZVA5g8xDHH/?igsi=MWY1dWQxMTQzdGZ3ZA==",
+"date": "2026-08-20"
+},
+{
+"name": "Caleb Kruse on Running Meta Ads with Claude Code",
+"summary": "Instagram Reel by @mr.paidsocial (Caleb Kruse, focused on Ads, AI, and Automation) promoting a system for running Meta ads using Claude Code. Viewers are prompted to comment 'Claude ads' to receive the system. Posted August 10, 2026, the reel garnered 5,102 likes and 8,044 comments.",
+"link": "https://www.instagram.com/reel/Db36X9ZypwK/?igsi=MThvMHVsa28yMWNw",
+"date": "2026-08-18"
+},
+{
+"name": "30-Day AI Challenge by Mariah Brunner",
+"summary": "Instagram Reel by Mariah Brunner (@itsmariahbrunner) promoting her 30-Day AI Challenge starting August 10, 2026. She argues that most people use AI to save five minutes, but those getting ahead build systems that save hundreds of hours. She outlines four things to build together during the challenge: a second brain, an AI teammate, an AI workflow, and an AI automation. Viewers are prompted to comment 'CHALLENGE' to receive access.",
+"link": "https://www.instagram.com/reel/DbwMNUbuz9R/?igsi=MTAyYzI2aGdzZ2cxaQ==",
+"date": "2026-08-18"
+},
+{
+"name": "CatGPT Instagram Reel: Step-by-step ads guide",
+"summary": "An Instagram reel by @askcatgpt (CatGPT) posted August 17, 2026, presenting a step-by-step guide (apparently related to running ads) in response to audience requests. The creator invites viewers to comment the word \"ads\" to receive a PDF version of the video's content. The post has garnered 369 likes and 388 comments, indicating strong engagement around the ads tutorial offer.",
+"link": "https://www.instagram.com/reel/DcKQ9HICtHw/?igsh=MXNxbTR0Nzk4NnZp",
+"date": "2026-08-18"
+},
+{
+"name": "Matty McTech: Generate Your Own QR Codes in Microsoft Word",
+"summary": "Matty McTech (@setupspawn) warns viewers not to rely on third-party QR code generator companies and shares an easy method to create QR codes yourself using Microsoft Word. The Instagram Reel, posted August 16, 2026, garnered 158K likes and 598 comments. Tagged with #microsoft, #technology, and #microsoftword.",
+"link": "https://www.instagram.com/reel/DcHN4pfKMRF/?igsh=MXNidzZtMzg5YnlmYQ==",
+"date": "2026-08-17"
+},
+{
+"name": "sites u just WONT regret using",
+"summary": "Instagram Reel by @buildwaleesh (aleeshh) posted August 5, 2026, recommending AI-powered websites/tools the creator says users won't regret trying. Tagged as sponsored content (#ad) in partnership with Manus (#manuspartner), covering AI tools, website builders, and app design categories. The post garnered 11K likes and 3,293 comments.",
+"link": "https://www.instagram.com/reel/DbqYVjazc5Q/?igsh=Z2l4bTJ0NGUyMmVx",
+"date": "2026-08-16"
+},
+{
+"name": "soundslikeclickclack on Threads: diagram-design Claude Code skill hits 8,600+ GitHub stars",
+"summary": "A Threads post by @soundslikeclickclack highlighting that the Claude Code skill 'diagram-design' surged past 8,600 GitHub stars, adding 1,600+ in a single day. The skill gives Claude 29 editorial diagram types (flowcharts, org charts, architecture diagrams, Gantt charts) and outputs self-contained HTML/SVG with no build step. It auto-reads a site's colors and fonts in \\~60 seconds for on-brand output, can redraw existing Mermaid or draw.io files, is MIT licensed, and also works with Codex and Pi.",
+"link": "https://www.threads.com/share/BAQkDsjAgH/",
+"date": "2026-08-14"
+},
+{
+"name": "CatGPT explains GitHub as a repository for your projects",
+"summary": "CatGPT (@askcatgpt) posted an Instagram Reel on August 11, 2026 framing GitHub as 'Google Drive for code' \u2014 an extremely useful repository for storing projects. She notes GitHub also handles version control (push, pull, merge, etc.) but intentionally left that out since it's most relevant for team software collaboration or long-term version tracking, which isn't 99% of her audience. She invites viewers to request a follow-up video on version control. Post tags @alo (wearing), @catlabs (location), and @github, @vercel, @claudeai; marked NOT SPONSORED.",
+"link": "https://www.instagram.com/reel/Db63K3wi5vV/?igsh=Z2ZsNW96dTNlenE3",
+"date": "2026-08-13"
+},
+{
+"name": "20 things to tell Claude to add to your website before launching",
+"summary": "Instagram Reel by yatesvids sharing a list of 20 things to instruct Claude to add to your website before launch, aimed at vibecoding developers. Posted August 9, 2026, the reel received 13K likes and 63 comments. Tagged with #vibecoding and #vibecode.",
+"link": "https://www.instagram.com/reel/Db15Zn0hSmH/?igsh=MWk4aGlyMTdoOHhpeg==",
+"date": "2026-08-11"
+},
+{
+"name": "Mya Nichol \u2014 Build a Customer Language Dashboard with Claude Cowork",
+"summary": "Instagram Reel by @myanichol (sponsored by Anthropic) demonstrating how to build a 'customer language dashboard' in Claude Cowork in about 5 minutes. The dashboard connects to Gmail, call transcripts, forms, and testimonials to extract customers' exact words, organizing them into two linked sides: a Prospect Language panel (pains, desires, questions, objections) and a Proof Vault (testimonials filed by offer and objection answered), refreshing every Monday. Includes the full copy-pasteable prompt with rules like only using words that appear in sources, no invented quotes, and showing a plan before changes. Viewers comment 'GOLD' to receive the full tutorial link.",
+"link": "https://www.instagram.com/reel/Dbs6exahMqP/?igsh=MW14ZDM5Y2lkNHkybQ==",
+"date": "2026-08-07"
+},
+{
+"name": "Camilla Castro on Instagram: Keep your Mac awake with the lid closed",
+"summary": "Instagram Reel by @camillaintech sharing a Mac tip: to keep a laptop running while the display is closed, go to Settings \u2192 Battery \u2192 Options, enable 'Prevent automatic sleeping...' and set 'Wake for network access' to Always. The post has 162 likes and 26 comments, and thanks followers who suggested the fix. Tagged with #ai #vibecoding #femaleentrepreneur #claudecode #codex.",
+"link": "https://www.instagram.com/reel/Dbso8tlso2r/?igsh=MWM4c2hraTZiMzZtZA==",
+"date": "2026-08-07"
+},
+{
+"name": "Claude built me a booking system that's actually on brand",
+"summary": "Instagram Reel by Brooke (@wright_mode) showcasing a custom booking system built with Claude as a free alternative to Calendly. The system features a custom URL, calendar integration, and payment collection on booking, all at no cost to run. Viewers are prompted to comment 'BUDGIE' to receive the full setup and guide.",
+"link": "https://www.instagram.com/reel/DbeSXvED_9U/?igsh=YzdpdnlkYmxnOTNs",
+"date": "2026-08-05"
+},
+{
+"name": "Claude by Anthropic: Monthly Release Recap (August 2026)",
+"summary": "Anthropic's Instagram recap highlights the release of Claude Opus 5, a proactive model approaching Fable 5's frontier intelligence at half the price, plus updates letting Claude turn recorded screen tasks into repeatable skills. Claude Code on desktop gained iOS simulator integration and an in-app browser, while Max/Team/Enterprise plans now include Fable 5 access (up to 50% of weekly usage) and the 50% Claude Code usage increase is extended through August 19. Additional updates: free Claude access for verified US K-12 educators with standards-mapped curricula, a redesigned voice mode with newer models/connectors/more languages, and Claude Cowork rolling out on web and mobile for Max/Team/Enterprise (Pro coming soon).",
+"link": "https://www.instagram.com/p/DboRfi4IHFP/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ==",
+"date": "2026-08-04"
+},
+{
+"name": "BREAKING: you can now teach Claude your entire visual identity once",
+"summary": "Threads post by @anjela.petkova.ai announcing a workflow where you teach Claude your visual identity/branding one time, and it then applies that identity automatically across every carousel, deck, and landing page you generate afterward. The post teases a step-by-step system for setting this up.",
+"link": "https://www.threads.com/@anjela.petkova.ai/post/DbiJtfTm1jH?xmt=AQG0laBpUbtEU9VWVdIJCJrma5VqgV1YFhPR72jWxq9HnvmUSkVUDQQrR8lnZ1DTlBq9ICpS&slof=1",
+"date": "2026-08-02"
+},
+{
+"name": "Claude's Content Creator Mode: Turn One Idea Into 20 Posts",
+"summary": "Instagram post from @itsaiguide promoting Claude's Content Creator Mode as a system for multiplying content output from a single idea. It studies audience interests, generates new angles, writes hooks, and repurposes one post into carousels, threads, emails, scripts, and captions. The post shares 6 prompts to use before starting a content planning session, reframing the creator's question from 'What do I post today?' to 'How far can I take this one idea?'",
+"link": "https://www.instagram.com/p/DaqrrT5DXEG/?igsh=MWdzZ2R1aHBrbnhicw==",
+"date": "2026-08-01"
+},
+{
+"name": "1,000 hours of claude code in 2min",
+"summary": "Instagram reel by Mino Lee (@minolee.mp4) posted July 26, 2026, condensing 1,000 hours of using Claude Code into a 2-minute video. The post received 1,705 likes and 31 comments, suggesting a time-lapse or highlight compilation of extended AI-assisted coding sessions.",
+"link": "https://www.instagram.com/reel/DbP55AYOO-f/?igsh=MTJ4b3MzdGI0MWdnaw==",
+"date": "2026-07-29"
+},
+{
+"name": "Will Nelson on Instagram: \"Comment 'SETTING'\"",
+"summary": "Instagram post by willnelson_coach_ published on June 27, 2026, prompting viewers to comment the keyword \"SETTING\" (a common tactic used to trigger an automated DM with additional content or resources). The post received 701 likes and 3,626 comments, indicating strong engagement driven by the comment-to-receive call to action. No further caption details or topic specifics are provided in the metadata beyond the comment prompt.",
+"link": "https://www.instagram.com/p/DaFdYZ1EQh4/?igsh=MTZtMnU2dTd5ejl4Yw==",
+"date": "2026-07-16"
+},
+{
+"name": "7 ChatGPT Prompts for Instagram Growth by Thomas Coleman",
+"summary": "Instagram Reel from @buildwealthwiththomas sharing 7 AI prompts for growing an Instagram account: (1) viral content ideation, (2) turning audience pain points into hooks, (3) 30-second Reel scripts with pattern-interrupt structure, (4) social proof on-screen text, (5) save-worthy tip lists, (6) repurposing text into Reels/carousels/static posts, and (7) curiosity-driven CTAs. Coleman claims these prompts helped him gain 40,000 followers in 4 months and uses a comment-gated lead magnet (comment 'Claude') to deliver his full system. Post has 3,078 likes and 2,417 comments as of July 15, 2026.",
+"link": "https://www.instagram.com/reel/Da0OQS2tc0q/?igsh=MXU3cTJidmVqc3Jm",
+"date": "2026-07-22"
+},
+{
+"name": "Laura Sales \\| Digital Marketing on Instagram",
+"summary": "Instagram post by @laurasalessocial (Laura Sales, Digital Marketing) dated July 5, 2026, promoting a content system that generates all your social media content from a single selfie. The caption prompts viewers to comment 'CLAUDE' to receive access to the system. The post has 3,170 likes and 13K comments, indicating high engagement around this AI-driven content creation offer.",
+"link": "https://www.instagram.com/p/DaakGajDqfu/?igsh=MTRoanRwZzd1dDJvaA==",
+"date": "2026-07-17"
+},
+{
+"name": "How to use Claude to create content people actually sign up for",
+"summary": "Kimani Digital shares a workflow for using Claude AI to generate content ideas from Instagram's Explore page. The process: use a Chrome extension to scrape viral content, then prompt Claude to analyze trending topics and audience pain points, and use a second prompt to create solutions addressing those exact problems. The creator claims this yields a week's worth of content built around what the audience is already engaged with, eliminating guesswork.",
+"link": "https://www.instagram.com/reel/DbJeTluAhHW/?igsh=MXhlc3I4dHJ2cWpxMA==",
+"date": "2026-07-27"
+},
+{
+"name": "Claude can now see Instagram searches",
+"summary": "James Oreilly (thejimmyreilly) explains that Claude's Chrome plugin can now analyze Instagram search results, allowing users to review top reels in their niche to generate viral content and digital product ideas. He invites viewers to comment 'prompts' to receive the prompts he uses to create and sell digital products online. The reel posted July 16, 2026 has 150 likes and 293 comments.",
+"link": "https://www.instagram.com/reel/Da5Y7JGBDMa/?igsh=c2hqcWN4bHJmOXQ1",
+"date": "2026-07-26"
+},
+{
+"name": "How I Use Claude to Grow My Instagram: My Actual Setup",
+"summary": "Ginny Beauguillaume (@ginnyfears) shares her 5-step Claude setup for Instagram content creation: (1) create a Project called 'Instagram Content' to house files, instructions, and chats; (2) select Opus with Extended Thinking for complex content strategy; (3) write project instructions covering name, audience, tone, and content pillars with rules like 'never sound corporate' and 'write like my best friend'; (4) upload knowledge files (Google Docs with hooks, past captions, reel scripts, client goals, formats) that Claude reads before every response; (5) create separate chats per content type (carousels, reels, captions) to keep context focused. Posted July 10, 2026 with 203 likes and 5 comments.",
+"link": "https://www.instagram.com/reel/Dam__uAoMXH/?igsh=MWlpZDllZmZ1N29kMA==",
+"date": "2026-07-25"
+},
+{
+"name": "Laura Sales on using Claude to run her content workflow",
+"summary": "Instagram post by laurasalessocial (Laura Sales, Digital Marketing) promoting the use of Claude AI to automate her entire content creation workflow. She expresses surprise that more people aren't aware of this capability and asks followers to comment 'CLAUDE' to receive a full breakdown of her process. The post also poses an engagement question about disliking being on camera, and has garnered 3,918 likes and 13K comments as of July 15, 2026.",
+"link": "https://www.instagram.com/p/Da0rJi2GDL9/?img_index=7&igsh=MXdyemd0ZTdneXF3cw==",
+"date": "2026-07-25"
+},
+{
+"name": "Chin Gregory: Claude + Digital Products",
+"summary": "Instagram Reel by @iamchingregory (posted July 7, 2026) promoting the use of Claude AI for creating digital products, describing the combination as \"wild.\" Viewers are prompted to comment \"GUIDE\" to receive Claude prompts and a free workshop ticket. The post has 2,448 likes and 5,880 comments, indicating strong engagement around AI-powered digital product creation.",
+"link": "https://www.instagram.com/reel/DagHUKkJmzl/?igsh=cG1jbHNycm9udTgz",
+"date": "2026-07-24"
+},
+{
+"name": "Level up Claude Code's writing with one humanizer skill",
+"summary": "Jens Heitmann shares a workflow to improve Claude Code's writing output by fetching the blader/humanizer repo from GitHub, adding Wikipedia's 'Signs of AI writing' as rules, and incorporating the StoryScope paper for structural tells. These are merged into a single skill with a CLAUDE.md rule so every human-facing document automatically runs through the humanization pass. Viewers are invited to share the reel with Claude Code to have it build the setup, or comment 'Human' to receive the finished repo.",
+"link": "https://www.instagram.com/reel/DbJzWBfxPvD/?igsh=NXFkMW5vdHA3ZDNv",
+"date": "2026-07-23"
+},
+{
+"name": "Mariah Brunner \\| AI with Mariah - Claude AI Finance Prompts Reel",
+"summary": "Instagram Reel by @itsmariahbrunner (AI with Mariah) posted July 22, 2026, promoting a set of 10 Claude AI prompts related to finance. The caption asks viewers to comment 'finance' to receive all 10 prompts via DM. Tagged with #claudeai, #aiforbeginners, #aitools, #aitips, and #claude; the post has 725 likes and 1,942 comments.",
+"link": "https://www.instagram.com/reel/DbHY28RBM40/?igsh=MXQwbjk4YWxycnE4OA==",
+"date": "2026-07-23"
+},
+{
+"name": "Jye de Zylva on learning from viral video content instead of copying",
+"summary": "Instagram Reel by Jye de Zylva arguing that stealing viral content isn't a strategy, but learning from it is. He promotes a Notion board system designed to help creators assess and extract insights from successful videos so they can innovate rather than copy. Viewers are prompted to comment 'skill' to receive the Notion board.",
+"link": "https://www.instagram.com/reel/DbCQnq6vxWL/?igsh=YTZ0MDNsdG91eTE0",
+"date": "2026-07-21"
+},
+{
+"name": "Giving Claude Eyes: Frame-by-Frame Video Analysis Skill",
+"summary": "Conrad (buildwith.conrad) shares a Claude skill that lets Claude actually 'see' videos instead of just reading transcripts. The workflow uses yt-dlp to download the video and FFmpeg to extract frames, which Claude then flips through like a flip-book while reading \u2014 processing a 30-minute video in about 90 seconds, running locally with zero API cost. Viewers are prompted to comment 'EYES' to receive the skill via DM for free.",
+"link": "https://www.instagram.com/reel/DalaUaasv-G/?igsh=emRtbDY4M2Fka29i",
+"date": "2026-07-19"
+},
+{
+"name": "Ash Harris: Free Higgsfield Alternative - Open Generative AI",
+"summary": "Instagram reel by Ash Harris (@ashharrisprod) promoting Open Generative AI, an open-source alternative to Higgsfield created by developer Anil Matcha (MIT licensed, 5,200 GitHub stars). The app includes four studios: image studio (50+ models like Flux, Midjourney, Nano Banana, Imagen 4), video studio (100+ models including Kling, Veo, Sora, Seedance, Wan 2.2), lip sync studio (9 models), and cinema studio (with lens/focal length/aperture controls that generate structured cinematic prompts). Users bring their own API keys and pay only for generation with no subscription, credit expiry, or throttling. Post asks viewers to comment 'OPEN' to receive the site and repo link.",
+"link": "https://www.instagram.com/reel/DXZi4k_j2ao/?igsh=M2M2dHVxY3Zpd29v",
+"date": "2026-07-19"
+},
+{
+"name": "Mariah Brunner on Claude Design: 3 Underrated Use Cases",
+"summary": "Instagram reel by @itsmariahbrunner highlighting Claude Design as an underrated AI tool with three specific use cases: customizing free motion-graphics templates to match your brand, dropping in an established brand's design system (e.g., Apple or Spotify) to build in that style, and rebuilding any website's design directly from its URL. Viewers are prompted to comment 'awesome' to receive the setup for all three, or 'challenge' for deeper AI learning. Posted July 5, 2026 with 1,390 likes and 2,296 comments.",
+"link": "https://www.instagram.com/reel/Daab1YAOSAC/?igsh=cHZ1eDJtemtwcnQ3",
+"date": "2026-07-19"
+},
+{
+"name": "3 Ways to Use Claude Design",
+"summary": "Mariah Brunner shares three underrated uses of Claude Design: customizing free motion-graphics templates to match your brand, dropping in a real brand's design system (like Apple or Spotify) to build in that style, and rebuilding any website's design from its URL. She invites viewers to comment 'awesome' for the setup for all three, or 'challenge' to go deeper on learning AI.",
+"link": "https://www.instagram.com/reel/Daab1YAOSAC/?igsh=cHZ1eDJtemtwcnQ3",
+"date": "2026-07-19"
+},
+{
+"name": "Palmier: AI-Native Video Editing Workspace with Claude Integration",
+"summary": "Marcos Rico Peng launched Palmier, an open-source video editor that treats editing as an AI-operable workspace rather than a manual timeline tool. It connects Claude directly to editing tasks, enabling creators to search footage, transcribe media, organize clips, and make changes via natural language. Palmier runs locally on Mac, requires users to bring their own Anthropic API key, and supports deeper automations through MCP. The post frames this as the direction creative software is heading \u2014 editors becoming AI-controlled workspaces.",
+"link": "https://www.instagram.com/p/DaUV84qmnOj/?igsh=MTRuZzFhemE3bzJmdQ==",
+"date": "2026-07-19"
+},
+{
+"name": "Charlie Hills: 24 Best Claude Tools Guide",
+"summary": "Instagram Reel from Charlie Hills (@charliehills) posted July 15, 2026, promoting a curated guide of 24 top Claude plugins, skills, and MCPs compiled into one resource. Viewers are prompted to comment \"GUIDE\" to receive the compilation via DM. The post has 1,017 likes and 3,196 comments, indicating strong engagement around Claude tooling discovery.",
+"link": "https://www.instagram.com/reel/Da0M8Ipmpxo/?igsh=eXI4M25ydWllbmtu",
+"date": "2026-07-19"
+},
+{
+"name": "Borja Obeso \u2014 Claude video editing skill",
+"summary": "Instagram Reel by borja.obeso (posted June 24, 2026) promoting a Claude 'skill' that turns Claude into a personal video editor. The skill reportedly includes motion hyper frames, presets for AI video generation, caption making, and more. Viewers are prompted to comment 'skill' to receive it. Tagged #marketing and #claude; the post has 2,222 likes and 6,468 comments.",
+"link": "https://www.instagram.com/reel/DZ-xvhFvT5U/?igsh=MTR3NXVyMmZqaTlvdA==",
+"date": "2026-07-18"
+},
+{
+"name": "Karpathy: LLM-Maintained Personal Knowledge Wikis",
+"summary": "Andrej Karpathy describes his workflow for building a personal knowledge base where LLMs, not humans, do the writing: raw documents are collected into a directory and an LLM compiles them into a markdown wiki with backlinks, browsed via Obsidian. The wiki is queried for complex questions, generates outputs in multiple formats (markdown, slides, images), and is kept healthy via LLM-run integrity checks and custom search tools. He stresses that you 'rarely ever write or edit the wiki manually \u2014 it's the domain of the LLM,' and sees an opportunity for a polished product in this space. The post drew massive engagement (\\~60K likes, 108K bookmarks, 21M views).",
+"link": "https://x.com/karpathy/status/2039805659525644595?s=46",
+"date": "2026-07-17"
+},
+{
+"name": "Nick Tarmossin on Instagram: comment \"guide\" for the full instructions, prompts, and tools mentioned",
+"summary": "Instagram Reel by nicktarmo posted July 16, 2026, teasing a guide with full instructions, prompts, and tools mentioned in the video. Viewers are instructed to comment the word \"guide\" to receive the complete resource. The post has 800 likes and 667 comments, suggesting engagement-bait style content designed to trigger DM auto-responses with the promised material.",
+"link": "https://www.instagram.com/reel/Da4OAL4s-Co/?igsh=NGZvMW9kejBqcmdo",
+"date": "2026-07-17"
+},
+{
+"name": "Jessica Carter on using AI without losing your authentic voice",
+"summary": "Instagram Reel from creator Jessica Carter (the.jessicacarter), a Christian mom and content creator, explaining that she uses AI as a tool but does not let it replace her own thoughts, words, or opinions. She argues that creators who feel unnatural on camera are likely over-relying on AI, and invites followers to comment 'INTERESTED' to join a waitlist for her upcoming editing mini-course on how she edits her 'yaps.' Post received 2,025 likes and 471 comments on July 16, 2026.",
+"link": "https://www.instagram.com/reel/Da3efnMynv1/?igsh=bzBrdTdxNDJtNmU1",
+"date": "2026-07-17"
+},
+{
+"name": "How Claude Cowork Helped Me Gain 10K+ Followers on Instagram",
+"summary": "Instagram Reel by @sheeensworld posted May 4, 2026, sharing how she used Claude Cowork to grow her Instagram following by 10K+ followers. The post is tagged with social media tips, Claude, Claude Cowork, marketing analytics, and creator tips. Received 4,254 likes and 89 comments.",
+"link": "https://www.instagram.com/reel/DX8NyfcRwGM/?igsh=ZTR3bDNseHJndHUy",
+"date": "2026-07-16"
+},
+{
+"name": "Thomas Lentine on wanting to use the newest, most expensive AI model without wasting money",
+"summary": "Thomas Lentine argues that users will perpetually want to use the newest and most expensive AI models, so it's worth developing the skill of doing so without 'lighting dollars on fire.' The post frames efficient use of premium models as an ongoing, necessary competency rather than a one-time optimization. Posted July 13, 2026, the reel drew 2,850 likes and 121 comments.",
+"link": "https://www.instagram.com/reel/DawVL3Isl4G/?igsh=MXJpemZnMnF5end2ZA==",
+"date": "2026-07-16"
+},
+{
+"name": "Anjela Petkova's Claude Design workflow for Instagram carousels",
+"summary": "Anjela Petkova (anjela.marketing) shares a four-step workflow for generating Instagram carousels with Claude Design: create a new Project called 'Instagram Carousels', upload screenshots of 2-3 carousels you like as style references, upload your source post or article, then write a single prompt to produce the carousel. She invites viewers to comment 'CAROUSEL' to receive the exact prompt. The post has 527 likes and 313 comments as of July 14, 2026.",
+"link": "https://www.instagram.com/reel/DaxwCd3sv5m/?igsh=MWQ3ODhwYW5leHAzMg==",
+"date": "2026-07-15"
+},
+{
+"name": "Claude skill that automates reel edits",
+"summary": "Kimani Digital (QUINTY) shares an Instagram reel about a Claude skill she built to automate the final tedious edits on face-to-camera reels. The workflow: install the skill via a few prompts, export video from an editing app to a Google Drive folder, and the skill grabs it, applies final edits, returns the updated file, and sends a copy to the camera roll. As a bonus, it pulls the voiceover audio and writes a caption. Viewers are told to comment \"SKILL\" to receive it.",
+"link": "https://www.instagram.com/reel/DasrwshjQSM/?igsh=MTZ6aTdsbW9laXdlYw==",
+"date": "2026-07-15"
+},
+{
+"name": "Luke Kostka - B2B Creative Strategist on Instagram",
+"summary": "Instagram Reel by luke_kostka posted July 10, 2026, showcasing his AI/Claude setup or workflow with the caption \"Your doesn't have to look as beautiful as mine\u2026 but it's a start :)\" tagged #ai and #claude. The post received 112 likes and 124 comments, suggesting engagement around AI tooling aesthetics or configuration.",
+"link": "https://www.instagram.com/reel/DaoJsm4yihb/?igsh=MXNod3lkN2NxYThvag==",
+"date": "2026-07-12"
+},
+{
+"name": "kimani digital // QUINTY on Instagram: FREE editing skill with 'GUIDE'",
+"summary": "Instagram post from kimanidigital promoting a free editing skill (accessed by commenting 'GUIDE') that teaches Claude to edit reels\u2014cutting silences, adding subtitles, formatting, color grading, and batch processing videos uploaded to a Drive folder. Also mentions two other automations: Claude building automations in Make, and a Chrome extension for Instagram trend analysis via the explore page. The overall message argues against automating everything at once, instead redesigning the one system that affects revenue first to make the business less founder-dependent. Tagged #contentautomation #claudeai #aiworkflow #contentrepurposing #automationtips.",
+"link": "https://www.instagram.com/p/DaprTzzF5t7/?img_index=1&igsh=OHV3eTh3aHpmN2Fq",
+"date": "2026-07-11"
+},
+{
+"name": "Jess \\| AI + Money \ud83d\udc9c on Instagram: Comment YAP for full detailed prompt to repurpose yapping videos",
+"summary": "Instagram Reel by @thelimitlessjess (Jess \\| AI + Money) posted July 6, 2026, promoting a giveaway where viewers who comment 'YAP' receive her detailed AI prompt for repurposing 'yapping' (talking-style) videos. The post tags @jessijeanhome and uses hashtags #ai, #claude, #yap, #yapchallenge, and #yapping, indicating the prompt is designed for use with Claude. The Reel has 899 likes and 2,581 comments, suggesting strong engagement driven by the comment-to-receive lead magnet tactic.",
+"link": "https://www.instagram.com/reel/DadM9pWs2Wy/?igsh=MXZ6OTV4bTMxMDVnMg==",
+"date": "2026-07-11"
+},
+{
+"name": "Karen X builds world's dumbest smartphone using Cursor - Day 1",
+"summary": "Karen Cheng (karenxcheng) shares day 1 of a project using Cursor to build 'the world's dumbest smartphone' by connecting a Vestaboard display to a 100-year-old rotary phone. She promises a full breakdown in her next video. Posted July 7, 2026, the reel garnered 584K likes and 2,461 comments, tagged as a #CursorCreator and #CursorPartner collaboration.",
+"link": "https://www.instagram.com/reel/DagDj1kA-9P/?igsh=MW43eTJzZ3cwNGs0eg==",
+"date": "2026-07-10"
+},
+{
+"name": "Notion launches HTML block for interactive content",
+"summary": "Notion (@notionhq) announced a new HTML block that lets users build interactive HTML directly on a Notion page. Users can ask Notion AI to convert existing content into interactive explainers, prototypes, or diagrams, and share these with teammates to edit and iterate collaboratively. The post has 26.5K views, 530 likes, and 87 shares as of viewing.",
+"link": "https://www.threads.com/@notionhq/post/DaQb5qVknS2?xmt=AQG0vnVNWDkNc544TQ26JTVYGtVsV_N4C3auY21viE0lkqZCcdeDd7WWwRi3XgukvjwPHv1o&slof=1",
+"date": "2026-07-02"
+},
+{
+"name": "kimani digital's \"never edit again\" Claude Code content automation system",
+"summary": "Instagram reel by kimanidigital promoting a free giveaway of a Claude Code-based video editing automation system (commenters type 'CLAUDE' to receive it). The system automatically cuts pauses/umms, adds color grading, burns in app-safe captions, and names files based on speech content, with optional Airtable/Canva logging. Setup takes \\~15 minutes via Terminal and Claude Code (claude.com/claude-code): paste a setup file, answer 2-3 questions, then workflow becomes record \u2192 drop in Inbox \u2192 grab from Outbox in 2-4 mins.",
+"link": "https://www.instagram.com/reel/DagRMDYOZZE/?igsh=YzFnMjV3b2RrY2Y4",
+"date": "2026-07-08"
+},
+{
+"name": "Double your close rate with a 3-minute pre-call Loom video",
+"summary": "Jarem Eriksen shares a system for using a short Loom video sent before a sales call to eliminate no-shows and shrink 60-minute pitches into 15-minute closes. Covers a 5-slide pre-sell framework, how to build and record it in under 45 minutes, an AI tool to write slide copy, and a 5-email sequence to ensure prospects watch the video and arrive ready to buy. Emphasizes that the window between booking and the call is where deals are won or lost.",
+"link": "https://www.instagram.com/p/DXNIvF-DE3g/?igsh=MTBldjF3Y2dtd2l4Nw==",
+"date": "2026-07-07"
+},
+{
+"name": "Georgie Barrat's 4-Video YouTube Sequence for Learning Claude AI from Scratch",
+"summary": "Instagram creator georgiebarrat recommends a specific YouTube learning path for beginners getting into Claude AI: (1) 'FULL Claude Tutorial for Beginners in 2026' by AI Foundations for orientation, (2) 'The Prompting Playbook' from the official Claude channel to learn proper prompting, (3) 'How I Use Claude Cowork as a Creative Strategist' by Dara Denney to see it in a real workflow, and (4) optionally Stanford University's 'Lecture 1: Course Overview and AI Foundations' from their free AI degree lectures. The post invites viewers to comment 'LINKS' for DM delivery of all four videos.",
+"link": "https://www.instagram.com/reel/DZdKldiNs3L/?igsh=MXFnMnl4ZWlpNDk1Ng==",
+"date": "2026-07-06"
+},
+{
+"name": "Mario \\| Chronically offline \u2014 How to screenshot or download an Instagram Reel",
+"summary": "An Instagram Reel by @xsoulfit (posted June 25, 2026) explaining how viewers can save content from the post. It instructs users to either pause the video to take a screenshot, or download the reel first and then screenshot from their camera roll. The download steps are: tap Share, scroll, and select Download. The post has 1,738 likes and 8 comments.",
+"link": "https://www.instagram.com/reel/DaBwuBKPdzA/?igsh=MTdtb3lpcWp4YzMycA==",
+"date": "2026-07-06"
+},
+{
+"name": "Ryan Sterling: Using AI to Nurture Leads (Not Content)",
+"summary": "Ryan Sterling shares how he's using AI in his business \u2014 specifically for nurturing leads rather than generating content. He claims this approach has enabled his business to make money passively, even while sleeping. The Instagram Reel, posted July 2, 2026, received 140 likes and 41 comments.",
+"link": "https://www.instagram.com/reel/DaTkfFiSDpu/?igsh=NGJlODE4OGJ0NXA4",
+"date": "2026-07-05"
+},
+{
+"name": "@digitally_create_ on Instagram: \"Comment x for more prompts and a free ig growth guide\"",
+"summary": "Instagram post by @digitally_create_ from June 11, 2026, promoting AI prompts and offering a free Instagram growth guide to users who comment 'x'. The post received 1,709 likes and 470 comments, suggesting a lead-generation style engagement bait format common in the digital creator/marketing niche.",
+"link": "https://www.instagram.com/p/DZctObDkckb/?img_index=1&igsh=MW1tazN0M2R0b243cw==",
+"date": "2026-07-04"
+},
+{
+"name": "Amie Tollefsrud Instagram Reel: Comment CLAUDE for more",
+"summary": "An Instagram Reel by lazymillionaire (Amie Tollefsrud) posted July 3, 2026, using a comment-gated engagement hook asking viewers to comment 'CLAUDE' to receive more information, likely related to Claude AI tips or automation content. The post received 119 likes and 134 comments, indicating active engagement with the comment-to-DM funnel tactic. No substantive content details are provided in the caption beyond the call-to-action.",
+"link": "https://www.instagram.com/reel/DaVt0-aB2vM/?igsh=MTNodnJzNmR1N294NA==",
+"date": "2026-07-04"
+}
+]
