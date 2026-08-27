@@ -34,82 +34,56 @@ Caveat on the check itself: the command `launchctl print ... | head -5 || echo
 empty input so the `||` never fires. Use `launchctl list | grep -i
 ai-content-filer` instead, which also shows the last exit code.
 
-## OPEN BLOCKER: the iMac filer died 23 Aug, and a SECOND instance is still filing
+## DIAGNOSIS COMPLETE: the iMac instance is dead; a second, healthy instance is doing the work
 
-Verified 27 Aug on the iMac:
+### The iMac instance is dead, and the cause is certain
+Verified 27 Aug:
 
-    -rw-r--r--  1 recreationdallas  staff  459917 Aug 23 07:50  filer.log
-    grep -c '✅'  ->  363
-    grep -c '❌'  ->    8
-    grep -c 'Now connected to Slack'  ->  322
-    claude --version  ->  2.1.139 (Claude Code)
+    launchctl list | grep -i ai-content-filer   ->  (no output, service not loaded)
+    ls -l ~/.gstack/browse-states/              ->  total 8, no instagram.json
+    echo "say OK" | claude -p                   ->  OK
+    claude --version                            ->  2.1.139
+    filer.log last written                      ->  Aug 23 07:50
 
-Last three log lines are a Slack reconnect followed by
-`❌ .../p/DcSZ2FNDayc/...: claude exited 1:` — an item that had already been
-filed successfully on 23 Aug. **The log has not been written to in four days.**
+**Claude is healthy.** That eliminates usage limits and expired CLI auth, the two
+leading hypotheses. The cause is the Instagram session: the state file is gone
+from `~/.gstack/browse-states/`, and the log says so in plain English.
 
-### The part that matters
-Notion rows created since the iMac went silent:
+The failure chain reads straight off the error sequence:
 
-    2026-08-24  2 rows
-    2026-08-25  4 rows
-    2026-08-26  3 rows
-    2026-08-27  0 rows
+    Could not parse a title/summary from Claude output       (Threads post)
+    Instagram post is age-restricted or private              (bot account can't view)
+    Instagram session is logged out - re-run the one-time login   x2
+    claude exited 1:                                         x3, same URL retried
 
-Nine rows filed after the only known filer stopped logging. Something else is
-writing to these databases. The most likely candidate is the **laptop instance**
-that was supposed to be booted out on 24 Jun ("Step 3 — Cut over"). If it is
-still live, it explains the historical duplicates and means the cutover never
-fully took.
+Session expired, so the browse step failed, so the claude subprocess exited 1
+with no usable stderr. The same URL (DcSZ2FNDayc) was retried three times — there
+is **no dead-letter handling**, so one poisoned item can block the queue.
 
-Health over the log's whole life: 363 successes against 8 failures, a 2.2%
-failure rate. This was not a chronically broken pipeline. It worked, then stopped.
+Total health over the log's life: 363 successes, 8 failures.
 
-Also worth noting: the iMac is on Claude Code **2.1.139**. Current builds are in
-the 2.1.24x range, so that install is roughly a hundred versions behind. An old
-CLI failing against a changed server-side contract is a plausible cause of
-`claude exited 1` with an empty stderr.
+### A second instance exists and is healthy
+9 rows were created 24-26 Aug, after the iMac went silent. All 9 carry the
+filer's exact output signature, and **all 9 have cover images attached** — versus
+only 186 of 270 (69%) of older rows. Downloading an Instagram cover requires a
+working Instagram session, which the iMac does not have.
 
-### Where the filer is NOT
-Checked 27 Aug, all three known Macs:
+So this is not a race between two filers. The iMac instance died and something
+else with its own working IG session has been carrying the load since 23 Aug,
+and doing a more complete job than the historical average.
 
-    STERLINGs-iMac      filer.log exists, last written Aug 23 07:50
-    robsmacmini         no ~/ai-content-filer/filer.log
-    MacBook-Pro-10      no ~/ai-content-filer/filer.log
+That instance is not on robsmacmini or MacBook-Pro-10 (neither has the directory).
+**Its host is still unidentified.**
 
-### But the filer is definitely still running
-All 9 rows created 24-26 Aug carry the filer's exact output signature
-(`Hook:` / `Format:` / `Takeaway:`), identical to the other 270 rows. That is
-machine output, not hand-entry. So the process is alive somewhere and simply is
-not writing to the iMac log path any more.
+### Why this matters for the build
+Patching the iMac would be patching a corpse. The caption/OCR/ASR changes must go
+on the live instance. Identifying its host is the blocking prerequisite.
 
-Three candidates: the service is running on the iMac but its plist now points
-StandardOutPath somewhere else (a `ai-content-filer-fixes.tgz` was applied on
-17 Jul); it rotated to a new log file; or it runs on a host not yet checked.
-
-Note the one command we have never actually got output from, because zsh ate it
-both times: `launchctl list | grep -i ai-content-filer` on the iMac.
-
-### Commands to finish the diagnosis
-No inline comments. A trailing `?` in a zsh comment glob-fails and kills the line.
-
-On the iMac:
-
-    ps aux | grep -i filer | grep -v grep
-    launchctl list | grep -i filer
-    ls -lt ~/ai-content-filer/ | head -20
-    find ~ -name "*.log" -newermt 2026-08-24 -not -path "*/node_modules/*" 2>/dev/null | head -20
-
-`ps aux` is the decisive one — if the process is alive it prints the working
-directory and arguments, which names the real log path directly.
-
-**Do not build the capture layers until this is resolved.** Adding caption, OCR
-and ASR steps while an unknown number of instances file into the same databases
-would multiply the duplicate problem rather than fix it.
-
-Adding stderr capture on the `claude` invocation belongs in step 1 regardless.
-A pipeline that dies silently for four days while everyone assumes it is running
-cannot be audited.
+Two useful side-findings for the build:
+- The filer already distinguishes a "bot account" from Rob's own, so some burner
+  concept already exists in the code.
+- Retry-forever with no dead-letter queue is a real bug. Step 1 should add a
+  failure cap and write `Capture Status = Failed` rather than looping.
 
 ## What is and is not blocking us
 
