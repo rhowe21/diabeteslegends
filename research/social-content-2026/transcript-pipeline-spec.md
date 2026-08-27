@@ -34,34 +34,68 @@ Caveat on the check itself: the command `launchctl print ... | head -5 || echo
 empty input so the `||` never fires. Use `launchctl list | grep -i
 ai-content-filer` instead, which also shows the last exit code.
 
-## OPEN BLOCKER: the filer appears to be failing
+## OPEN BLOCKER: the iMac filer died 23 Aug, and a SECOND instance is still filing
 
-Last three lines of `~/ai-content-filer/filer.log` as of 27 Aug:
+Verified 27 Aug on the iMac:
 
-    [INFO] socket-mode: Going to establish a new connection to Slack ...
-    [INFO] socket-mode: Now connected to Slack
-    ❌ https://www.instagram.com/p/DcSZ2FNDayc/...: claude exited 1:
+    -rw-r--r--  1 recreationdallas  staff  459917 Aug 23 07:50  filer.log
+    grep -c '✅'  ->  363
+    grep -c '❌'  ->    8
+    grep -c 'Now connected to Slack'  ->  322
+    claude --version  ->  2.1.139 (Claude Code)
 
-Reconnect → attempt one item → fail. That is a crash-restart signature.
+Last three log lines are a Slack reconnect followed by
+`❌ .../p/DcSZ2FNDayc/...: claude exited 1:` — an item that had already been
+filed successfully on 23 Aug. **The log has not been written to in four days.**
 
-Two things make it worse than a single bad item:
-1. That URL (Matt Gray, "$100K is an architecture problem") was **already filed
-   successfully on 23 Aug**. The filer is re-processing completed work.
-2. `claude exited 1:` has an empty error string — the filer does not capture
-   claude's stderr, so failures are invisible. Nobody noticed.
+### The part that matters
+Notion rows created since the iMac went silent:
 
-Newest successful row in Notion is 26 Aug 16:17, roughly 20 h before the check.
+    2026-08-24  2 rows
+    2026-08-25  4 rows
+    2026-08-26  3 rows
+    2026-08-27  0 rows
 
-Candidate causes, in rough order of likelihood: claude CLI usage limit; claude
-auth expired in the headless launchd context (this has bitten other Recreation
-cron jobs before); expired Instagram session state; CLI version drift after an
-update. `echo "say OK" | claude -p` separates the first two from the last two.
+Nine rows filed after the only known filer stopped logging. Something else is
+writing to these databases. The most likely candidate is the **laptop instance**
+that was supposed to be booted out on 24 Jun ("Step 3 — Cut over"). If it is
+still live, it explains the historical duplicates and means the cutover never
+fully took.
 
-**Do not build the capture layers until this is fixed** — otherwise we are adding
-caption, OCR and ASR steps to a pipeline that is crash-looping.
+Health over the log's whole life: 363 successes against 8 failures, a 2.2%
+failure rate. This was not a chronically broken pipeline. It worked, then stopped.
 
-Adding stderr capture on the `claude` invocation should be part of step 1
-regardless. A pipeline that fails silently for a day cannot be audited.
+Also worth noting: the iMac is on Claude Code **2.1.139**. Current builds are in
+the 2.1.24x range, so that install is roughly a hundred versions behind. An old
+CLI failing against a changed server-side contract is a plausible cause of
+`claude exited 1` with an empty stderr.
+
+### Commands to finish the diagnosis
+zsh does NOT treat `#` as a comment interactively, and a trailing `?` in a
+comment glob-fails and aborts the whole line. Run these with no inline comments.
+
+On the iMac:
+
+    launchctl list | grep -i ai-content-filer
+    grep '❌' ~/ai-content-filer/filer.log | tail -10
+    head -1 ~/ai-content-filer/filer.log
+    tail -1 ~/ai-content-filer/filer.log
+    echo "say OK" | claude -p 2>&1 | head -20
+    ls -l ~/.gstack/browse-states/
+
+On the MacBook Pro, to find the second instance:
+
+    launchctl list | grep -i ai-content-filer
+    ls -l ~/ai-content-filer/filer.log
+    tail -3 ~/ai-content-filer/filer.log
+
+**Do not build the capture layers until this is resolved.** Adding caption, OCR
+and ASR steps while an unknown number of instances file into the same databases
+would multiply the duplicate problem rather than fix it.
+
+Adding stderr capture on the `claude` invocation belongs in step 1 regardless.
+A pipeline that dies silently for four days while everyone assumes it is running
+cannot be audited.
 
 ## What is and is not blocking us
 
