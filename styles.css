@@ -338,6 +338,20 @@ h3 { font-size: clamp(22px, 2.4vw, 30px); }
 .form-success-panel p { color: #555; margin: 0; }
 .donate-widget { margin: 24px 0 40px; }
 
+.event-card.is-completed { opacity: 0.68; }
+.event-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  color: #2e7d32;
+  background: rgba(46, 125, 50, 0.1);
+  padding: 6px 12px;
+  border-radius: 999px;
+}
+
 /* === Footer === */
 .site-footer {
   background: var(--black);
