@@ -1,0 +1,169 @@
+/* === November Free Throw Challenge — layers on ../styles.css === */
+
+.btn-dark { background: var(--black); color: #fff; border-color: var(--black); }
+.btn-dark:hover { background: var(--orange); border-color: var(--orange); }
+.btn.is-disabled { opacity: .45; pointer-events: none; }
+
+/* Hero */
+.ft-hero { background: var(--black); }
+.ft-hero-image {
+  background-image: url('../assets/photos/freethrow/rob-set.jpg');
+  background-position: center 18%;
+  left: 48%;
+}
+.ft-hero .hero-overlay {
+  background:
+    linear-gradient(90deg, var(--black) 48%, rgba(10,10,10,.55) 58%, rgba(10,10,10,0) 72%),
+    linear-gradient(180deg, rgba(10,10,10,0) 70%, rgba(10,10,10,.6) 100%);
+}
+.ft-hero .hero-content { max-width: var(--max); }
+.ft-hero .hero-title, .ft-hero .hero-sub { max-width: 13ch; }
+.ft-hero .hero-sub { max-width: 46ch; }
+.ft-countdown {
+  display: flex; flex-wrap: wrap; align-items: center;
+  gap: 12px 20px;
+  margin-top: 48px;
+}
+.ft-count-unit {
+  display: flex; flex-direction: column; align-items: center;
+  min-width: 76px;
+  padding: 10px 12px 8px;
+  background: rgba(0,0,0,0.55);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: var(--radius);
+}
+.ft-count-num { font-family: 'Bebas Neue', sans-serif; font-size: 44px; line-height: 1; color: #fff; font-variant-numeric: tabular-nums; }
+.ft-count-label { font-size: 11px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--orange); margin-top: 4px; }
+.ft-count-caption { flex-basis: 100%; margin: 0; font-size: 14px; color: #ddd; }
+
+/* Goal band */
+.ft-goal-band { background: var(--black); color: #fff; padding: 28px 0; border-top: 4px solid var(--orange); }
+.ft-goal-row { display: grid; grid-template-columns: auto 1fr; gap: 32px; align-items: center; }
+.ft-goal-label { margin: 0; font-size: 12px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--orange); }
+.ft-goal-numbers { margin: 0; font-family: 'Bebas Neue', sans-serif; font-size: 40px; line-height: 1.05; }
+.ft-goal-of { font-family: 'Inter', sans-serif; font-size: 15px; color: #bbb; }
+.ft-goal-bar { height: 14px; background: #222; border-radius: 999px; overflow: hidden; }
+.ft-goal-fill { height: 100%; width: 0; background: var(--orange); border-radius: 999px; transition: width .8s ease; }
+
+/* Pledge calculator */
+.ft-calc {
+  display: grid; grid-template-columns: 1.3fr 1fr; gap: 32px;
+  margin-top: 40px; padding: 32px;
+  background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+}
+.ft-field { display: block; margin-bottom: 28px; }
+.ft-field:last-child { margin-bottom: 0; }
+.ft-field > span {
+  display: block; margin-bottom: 12px;
+  font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--ink);
+}
+.ft-field strong { color: var(--orange); }
+.ft-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.ft-chip {
+  background: #fff; color: var(--ink);
+  border: 2px solid var(--line); border-radius: 999px;
+  padding: 10px 20px; font-weight: 700; font-size: 15px;
+  transition: all .15s ease;
+}
+.ft-chip:hover { border-color: var(--orange); }
+.ft-chip.is-active { background: var(--orange); border-color: var(--orange); color: #fff; }
+.ft-field input[type="range"] { width: 100%; accent-color: var(--orange); height: 28px; }
+.ft-calc-result {
+  display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
+  background: var(--black); color: #fff; border-radius: var(--radius); padding: 24px;
+}
+.ft-calc-total { margin: 0; font-family: 'Bebas Neue', sans-serif; font-size: clamp(64px, 9vw, 96px); line-height: 1; color: var(--orange); font-variant-numeric: tabular-nums; }
+.ft-calc-note { margin: 8px 0 0; font-size: 14px; color: #bbb; }
+.ft-calc-footnote { margin: 20px 0 0; font-size: 15px; color: #555; text-align: center; }
+
+/* Shooters */
+.ft-shooter-btn { margin-top: 20px; }
+.ft-campers-card {
+  display: flex; align-items: center; justify-content: space-between; gap: 24px;
+  margin-top: 48px; padding: 32px;
+  background: var(--paper-2); border-left: 4px solid var(--orange); border-radius: var(--radius);
+}
+.ft-campers-card h3 { margin-bottom: 6px; }
+.ft-campers-card p { margin: 0; color: #444; max-width: 60ch; }
+.ft-campers-card .btn { flex-shrink: 0; }
+
+/* Parents */
+.ft-parents { background: var(--paper-2); }
+.ft-parents-grid { display: grid; grid-template-columns: 5fr 7fr; gap: 56px; align-items: center; }
+.ft-parents-photo {
+  aspect-ratio: 3 / 4;
+  background: url('../assets/photos/denver/denver-5.jpg') center / cover no-repeat, #1a1a1a;
+  border-radius: var(--radius);
+}
+.ft-steps { counter-reset: step; list-style: none; padding: 0; margin: 32px 0; display: grid; gap: 18px; }
+.ft-steps li { counter-increment: step; position: relative; padding-left: 52px; color: #333; }
+.ft-steps li::before {
+  content: counter(step);
+  position: absolute; left: 0; top: -2px;
+  width: 36px; height: 36px; border-radius: 50%;
+  background: var(--black); color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Bebas Neue', sans-serif; font-size: 20px;
+}
+.ft-steps strong { color: var(--ink); }
+.ft-steps a, .ft-fine a { color: var(--orange); font-weight: 600; }
+.ft-parents-actions { margin-bottom: 16px; }
+.ft-fine { font-size: 14px; color: #666; margin: 0; }
+
+/* Shooter card + schedule photos */
+.ft-shooter-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 380px)); gap: 36px; margin-top: 48px; }
+.ft-schedule-grid { display: grid; grid-template-columns: 5fr 7fr; gap: 56px; align-items: center; }
+.ft-schedule-photo {
+  aspect-ratio: 2 / 3;
+  background: url('../assets/photos/freethrow/rob-shot.jpg') center / cover no-repeat, #1a1a1a;
+  border-radius: var(--radius);
+}
+
+/* Timeline */
+.ft-timeline { display: grid; gap: 4px; margin-top: 40px; }
+.ft-tl-item { display: grid; grid-template-columns: 140px 1fr; gap: 28px; padding: 24px 0; border-top: 1px solid #222; }
+.ft-tl-date { font-family: 'Bebas Neue', sans-serif; font-size: 30px; color: var(--orange); line-height: 1.1; }
+.ft-tl-body h3 { color: #fff; margin-bottom: 6px; }
+.ft-tl-body p { margin: 0; color: #bbb; }
+
+/* Pledge CTA */
+.ft-pledge-inner { text-align: center; }
+.ft-pledge-inner .lead { margin: 0 auto; }
+.ft-pledge-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin: 36px 0 20px; }
+
+/* FAQ */
+.ft-faq { margin-top: 32px; border-top: 1px solid var(--line); }
+.ft-faq details { border-bottom: 1px solid var(--line); }
+.ft-faq summary {
+  list-style: none; cursor: pointer;
+  padding: 22px 40px 22px 0; position: relative;
+  font-weight: 700; font-size: 18px; color: var(--ink);
+}
+.ft-faq summary::-webkit-details-marker { display: none; }
+.ft-faq summary::after {
+  content: '+'; position: absolute; right: 4px; top: 50%; transform: translateY(-50%);
+  font-size: 28px; font-weight: 400; color: var(--orange); transition: transform .2s ease;
+}
+.ft-faq details[open] summary::after { transform: translateY(-50%) rotate(45deg); }
+.ft-faq details p { margin: 0 0 22px; color: #444; max-width: 68ch; }
+.ft-faq a { color: var(--orange); font-weight: 600; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .ft-calc { grid-template-columns: 1fr; padding: 24px; }
+  .ft-parents-grid { grid-template-columns: 1fr; gap: 32px; }
+  .ft-parents-photo { aspect-ratio: 4 / 3; background-position: center 30%; }
+  .ft-campers-card { flex-direction: column; align-items: flex-start; }
+  .ft-shooter-grid { grid-template-columns: 1fr; gap: 40px; }
+  .ft-schedule-grid { grid-template-columns: 1fr; gap: 32px; }
+  .ft-schedule-photo { aspect-ratio: 4 / 3; background-position: center 12%; }
+  .ft-hero-image { left: 0; background-position: 60% 15%; }
+  .ft-hero .hero-overlay { background: linear-gradient(180deg, rgba(10,10,10,.35) 0%, rgba(10,10,10,.75) 55%, rgba(10,10,10,.92) 100%); }
+}
+@media (max-width: 720px) {
+  .ft-goal-row { grid-template-columns: 1fr; gap: 14px; }
+  .ft-tl-item { grid-template-columns: 1fr; gap: 6px; }
+  .ft-count-unit { min-width: 64px; }
+  .ft-count-num { font-size: 36px; }
+  .ft-pledge-actions .btn, .ft-parents-actions .btn, .hero-actions .btn { width: 100%; }
+}
