@@ -131,7 +131,8 @@ h3 { font-size: clamp(22px, 2.4vw, 30px); }
 .section { padding: clamp(72px, 10vw, 120px) 0; }
 .section-mission { background: var(--paper); }
 .section-events { background: var(--paper-2); }
-.section-board { background: var(--paper); }
+.section-scholarship { background: var(--paper); }
+.section-board { background: var(--paper); border-top: 1px solid var(--line); }
 .section-gallery { background: var(--black); color: #fff; }
 .section-gallery .eyebrow { color: var(--orange); }
 .section-gallery .section-title { color: #fff; }

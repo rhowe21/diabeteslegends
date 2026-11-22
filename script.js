@@ -86,15 +86,17 @@
   lightbox.addEventListener('click', function (e) { if (e.target === lightbox) closeLightbox(); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeLightbox(); });
 
-  // Contact form — submit to Web3Forms via fetch (stays on-page, robust to
-  // Cloudflare challenges that break a plain full-page POST redirect).
-  var form = document.getElementById('contact-form');
-  if (form) {
+  // Web3Forms forms (contact + travel scholarship) — submit via fetch (stays
+  // on-page, robust to Cloudflare challenges that break a plain POST redirect).
+  document.querySelectorAll('form.js-web3form').forEach(function (form) {
     var note = form.querySelector('.form-note');
     var submitBtn = form.querySelector('button[type="submit"]');
+    var btnLabel = form.dataset.button || 'Send Message';
+    var successTitle = form.dataset.successTitle || 'Thanks — we got your message.';
+    var successBody = form.dataset.successBody || 'We\'ll get back to you at the email you gave us, usually within 2 business days.';
 
     function showError(msg) {
-      if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'Send Message'; }
+      if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = btnLabel; }
       if (note) {
         note.textContent = msg + ' Or email rob@diabeticsdoingthings.com directly.';
         note.classList.add('form-error');
@@ -116,11 +118,13 @@
         })
         .then(function (r) {
           if (r.ok && r.data && r.data.success) {
-            form.innerHTML =
-              '<div class="form-success-panel">' +
-              '<h3>Thanks — we got your message.</h3>' +
-              '<p>We\'ll get back to you at the email you gave us, usually within 2 business days.</p>' +
-              '</div>';
+            var panel = document.createElement('div');
+            panel.className = 'form-success-panel';
+            var h = document.createElement('h3'); h.textContent = successTitle;
+            var p = document.createElement('p'); p.textContent = successBody;
+            panel.appendChild(h); panel.appendChild(p);
+            form.innerHTML = '';
+            form.appendChild(panel);
           } else {
             showError((r.data && r.data.message) ? r.data.message : 'Something went wrong sending your message.');
           }
@@ -129,5 +133,5 @@
           showError('Network error sending your message.');
         });
     });
-  }
+  });
 })();

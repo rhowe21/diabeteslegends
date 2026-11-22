@@ -50,6 +50,7 @@
       <a href="freethrow/" class="nav-ft">Free Throw Challenge</a>
       <a href="#mission">Mission</a>
       <a href="#events">2026 Events</a>
+      <a href="#scholarship">LKD Travel Scholarship</a>
       <a href="#board">Board</a>
       <a href="#gallery">Gallery</a>
       <a href="#contact" class="nav-cta">Contact</a>
@@ -157,6 +158,55 @@
   </div>
 </section>
 
+<section id="scholarship" class="section section-scholarship">
+  <div class="container narrow">
+    <p class="eyebrow">LKD Travel Scholarship</p>
+    <h2 class="section-title">Too far from a clinic? Let us help get you there.</h2>
+    <p class="lead">If your family lives outside our clinic markets or more than a 3-hour drive from a Diabetes Legends Clinic, apply for the LKD Travel Scholarship to help cover your camper's travel costs.</p>
+
+    <form action="https://api.web3forms.com/submit" method="POST" class="contact-form js-web3form" id="scholarship-form" data-button="Submit Application" data-success-title="Thanks — your application is in." data-success-body="We'll review it and reach out at the email you gave us.">
+      <input type="hidden" name="access_key" value="a4f38d9b-bbe8-453f-81b1-1bf4e2c5899f" />
+      <input type="hidden" name="subject" value="New LKD Travel Scholarship application — diabeteslegends.org" />
+      <input type="hidden" name="from_name" value="Diabetes Legends Website" />
+      <div class="form-row">
+        <label>
+          <span>Camper name</span>
+          <input type="text" name="camper_name" required />
+        </label>
+        <label>
+          <span>Camper age</span>
+          <input type="number" name="camper_age" min="1" max="25" inputmode="numeric" required />
+        </label>
+      </div>
+      <label>
+        <span>Parent name</span>
+        <input type="text" name="name" required autocomplete="name" />
+      </label>
+      <div class="form-row">
+        <label>
+          <span>Parent email</span>
+          <input type="email" name="email" required autocomplete="email" />
+        </label>
+        <label>
+          <span>Parent phone</span>
+          <input type="tel" name="phone" required autocomplete="tel" />
+        </label>
+      </div>
+      <label>
+        <span>Zip code</span>
+        <input type="text" name="zip_code" required autocomplete="postal-code" inputmode="numeric" pattern="[0-9]{5}(-[0-9]{4})?" title="5-digit zip code" />
+      </label>
+      <label>
+        <span>Tell us about your camper and why attending Diabetes Legends is important to them</span>
+        <textarea name="message" rows="6" required></textarea>
+      </label>
+      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" />
+      <button type="submit" class="btn btn-primary btn-block">Submit Application</button>
+      <p class="form-note">Applications go to rob@diabeticsdoingthings.com.</p>
+    </form>
+  </div>
+</section>
+
 <section id="board" class="section section-board">
   <div class="container">
     <p class="eyebrow">Board of Directors</p>
@@ -223,7 +273,7 @@
     <h2 class="section-title">Want to play? Sponsor? Partner?</h2>
     <p class="lead">Tell us what you're thinking. We read every message.</p>
 
-    <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" id="contact-form">
+    <form action="https://api.web3forms.com/submit" method="POST" class="contact-form js-web3form" id="contact-form">
       <!-- Web3Forms: paste your access key below. Get it free at web3forms.com using rob@diabeticsdoingthings.com -->
       <input type="hidden" name="access_key" value="a4f38d9b-bbe8-453f-81b1-1bf4e2c5899f" />
       <input type="hidden" name="subject" value="New message from diabeteslegends.org" />
@@ -273,6 +323,7 @@
     <nav class="footer-nav" aria-label="Footer">
       <a href="#mission">Mission</a>
       <a href="#events">Events</a>
+      <a href="#scholarship">LKD Travel Scholarship</a>
       <a href="#board">Board</a>
       <a href="#gallery">Gallery</a>
       <a href="#contact">Contact</a>
