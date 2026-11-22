@@ -1,0 +1,17 @@
+{
+  "projectId": "12043516317019830414",
+  "name": "projects/12043516317019830414",
+  "title": "Diabetes Legends Foundation",
+  "designSystem": {
+    "assetId": "84d421fd5e124ac6a10846bcc025068c",
+    "displayName": "Diabetes Legends",
+    "source": ".stitch/DESIGN.md",
+    "colorMode": "LIGHT",
+    "primary": "#f15a24",
+    "secondary": "#0a0a0a",
+    "headlineFont": "Bebas Neue",
+    "bodyFont": "Inter",
+    "roundness": "4px"
+  },
+  "screens": {}
+}
