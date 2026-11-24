@@ -49,8 +49,9 @@
     <nav class="primary-nav" aria-label="Primary">
       <a href="freethrow/" class="nav-ft">Free Throw Challenge</a>
       <a href="#mission">Mission</a>
-      <a href="#events">2026 Events</a>
-      <a href="#scholarship">LKD Travel Scholarship</a>
+      <a href="#events">Events</a>
+      <a href="#scholarship">LKD Scholarship</a>
+      <a href="#volunteer">Volunteer</a>
       <a href="#board">Board</a>
       <a href="#gallery">Gallery</a>
       <a href="#contact" class="nav-cta">Contact</a>
@@ -207,6 +208,86 @@
   </div>
 </section>
 
+<section id="volunteer" class="section section-volunteer">
+  <div class="container">
+    <p class="eyebrow">Volunteer in 2027</p>
+    <h2 class="section-title">Four cities. Come run it with us.</h2>
+    <p class="lead">Every clinic runs on volunteers — coaches, check-in crews, nurses and diabetes educators, photographers, and people who just love the game. Pick your city and we'll be in touch when dates are set.</p>
+
+    <div class="volunteer-cities">
+      <article class="volunteer-city">
+        <h3>Orlando, FL</h3>
+        <p>Our clinic at the CWD Friends for Life conference.</p>
+        <a href="#volunteer-form" class="event-link js-volunteer-city" data-city="Orlando, FL">Volunteer in Orlando →</a>
+      </article>
+      <article class="volunteer-city">
+        <h3>DFW, TX</h3>
+        <p>Our hometown clinic in Dallas–Fort Worth.</p>
+        <a href="#volunteer-form" class="event-link js-volunteer-city" data-city="DFW, TX">Volunteer in DFW →</a>
+      </article>
+      <article class="volunteer-city">
+        <h3>Denver, CO</h3>
+        <p>Mountain-time hoops in the Mile High City.</p>
+        <a href="#volunteer-form" class="event-link js-volunteer-city" data-city="Denver, CO">Volunteer in Denver →</a>
+      </article>
+      <article class="volunteer-city">
+        <h3>Atlanta, GA</h3>
+        <p>New for 2027 — our first clinic in Atlanta.</p>
+        <a href="#volunteer-form" class="event-link js-volunteer-city" data-city="Atlanta, GA">Volunteer in Atlanta →</a>
+      </article>
+    </div>
+
+    <div class="narrow volunteer-form-wrap">
+    <form action="https://api.web3forms.com/submit" method="POST" class="contact-form js-web3form" id="volunteer-form" data-button="Sign Up to Volunteer" data-success-title="Thanks — you're on the list." data-success-body="We'll reach out with dates and details for your city.">
+      <input type="hidden" name="access_key" value="a4f38d9b-bbe8-453f-81b1-1bf4e2c5899f" />
+      <input type="hidden" name="subject" value="New 2027 volunteer sign-up — diabeteslegends.org" />
+      <input type="hidden" name="from_name" value="Diabetes Legends Website" />
+      <fieldset class="check-group" data-required-group>
+        <legend>Which city? <em>(pick all that apply)</em></legend>
+        <div class="check-grid">
+          <label class="check"><input type="checkbox" name="cities" value="Orlando, FL" /> Orlando, FL</label>
+          <label class="check"><input type="checkbox" name="cities" value="DFW, TX" /> DFW, TX</label>
+          <label class="check"><input type="checkbox" name="cities" value="Denver, CO" /> Denver, CO</label>
+          <label class="check"><input type="checkbox" name="cities" value="Atlanta, GA" /> Atlanta, GA</label>
+        </div>
+      </fieldset>
+      <label>
+        <span>Name</span>
+        <input type="text" name="name" required autocomplete="name" />
+      </label>
+      <div class="form-row">
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" required autocomplete="email" />
+        </label>
+        <label>
+          <span>Phone</span>
+          <input type="tel" name="phone" required autocomplete="tel" />
+        </label>
+      </div>
+      <label>
+        <span>How would you like to help?</span>
+        <select name="role" required>
+          <option value="">Choose one</option>
+          <option>Coaching / on the court</option>
+          <option>Check-in &amp; registration</option>
+          <option>Medical support (nurse, CDCES, provider)</option>
+          <option>Photo / video</option>
+          <option>Setup, teardown &amp; wherever needed</option>
+        </select>
+      </label>
+      <label>
+        <span>Anything else we should know? <em>(optional)</em></span>
+        <textarea name="message" rows="4"></textarea>
+      </label>
+      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" />
+      <button type="submit" class="btn btn-primary btn-block">Sign Up to Volunteer</button>
+      <p class="form-note">Sign-ups go to rob@diabeticsdoingthings.com.</p>
+    </form>
+    </div>
+  </div>
+</section>
+
 <section id="board" class="section section-board">
   <div class="container">
     <p class="eyebrow">Board of Directors</p>
@@ -324,6 +405,7 @@
       <a href="#mission">Mission</a>
       <a href="#events">Events</a>
       <a href="#scholarship">LKD Travel Scholarship</a>
+      <a href="#volunteer">Volunteer</a>
       <a href="#board">Board</a>
       <a href="#gallery">Gallery</a>
       <a href="#contact">Contact</a>

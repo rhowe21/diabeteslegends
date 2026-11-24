@@ -103,15 +103,36 @@
       }
     }
 
+    // Checkbox groups marked data-required-group need at least one box ticked.
+    var groups = form.querySelectorAll('[data-required-group]');
+    function checkGroups() {
+      var ok = true;
+      groups.forEach(function (g) {
+        var boxes = g.querySelectorAll('input[type="checkbox"]');
+        var any = Array.prototype.some.call(boxes, function (b) { return b.checked; });
+        boxes[0].setCustomValidity(any ? '' : 'Please pick at least one.');
+        if (!any) { ok = false; }
+      });
+      return ok;
+    }
+    groups.forEach(function (g) { g.addEventListener('change', checkGroups); });
+    checkGroups();
+
     form.addEventListener('submit', function (e) {
       e.preventDefault();
+      if (!checkGroups()) { form.reportValidity(); return; }
       if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Sending…'; }
       if (note) { note.classList.remove('form-error'); }
 
       fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: { 'Accept': 'application/json' },
-        body: new FormData(form)
+        body: (function () {
+          // Collapse repeated keys (checkbox groups) into one comma-separated value.
+          var fd = new FormData(form), out = new FormData();
+          fd.forEach(function (v, k) { if (!out.has(k)) { out.append(k, fd.getAll(k).join(', ')); } });
+          return out;
+        })()
       })
         .then(function (res) {
           return res.json().then(function (data) { return { ok: res.ok, data: data }; });
@@ -132,6 +153,13 @@
         .catch(function () {
           showError('Network error sending your message.');
         });
+    });
+  });
+  // "Volunteer in <city>" buttons pre-check that city in the volunteer form.
+  document.querySelectorAll('.js-volunteer-city').forEach(function (link) {
+    link.addEventListener('click', function () {
+      var box = document.querySelector('#volunteer-form input[name="cities"][value="' + link.dataset.city + '"]');
+      if (box) { box.checked = true; box.dispatchEvent(new Event('change', { bubbles: true })); }
     });
   });
 })();

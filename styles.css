@@ -58,7 +58,7 @@ h3 { font-size: clamp(22px, 2.4vw, 30px); }
   .header-row { min-height: 76px; }
 }
 
-.primary-nav { display: flex; gap: 32px; align-items: center; }
+.primary-nav { display: flex; gap: 26px; align-items: center; }
 .primary-nav a {
   font-weight: 600; font-size: 15px;
   color: var(--ink);
@@ -66,6 +66,7 @@ h3 { font-size: clamp(22px, 2.4vw, 30px); }
   padding: 8px 0;
   transition: color .15s ease;
 }
+.primary-nav a { white-space: nowrap; }
 .primary-nav a:hover { color: var(--orange); }
 .primary-nav a.nav-cta {
   background: var(--black); color: #fff;
@@ -132,7 +133,8 @@ h3 { font-size: clamp(22px, 2.4vw, 30px); }
 .section-mission { background: var(--paper); }
 .section-events { background: var(--paper-2); }
 .section-scholarship { background: var(--paper); }
-.section-board { background: var(--paper); border-top: 1px solid var(--line); }
+.section-volunteer { background: var(--paper-2); }
+.section-board { background: var(--paper); }
 .section-gallery { background: var(--black); color: #fff; }
 .section-gallery .eyebrow { color: var(--orange); }
 .section-gallery .section-title { color: #fff; }
@@ -392,6 +394,28 @@ h3 { font-size: clamp(22px, 2.4vw, 30px); }
 .ft-promo-text { margin: 0; font-family: 'Bebas Neue', sans-serif; font-size: clamp(24px, 2.6vw, 32px); line-height: 1.1; flex: 1 1 320px; }
 .ft-promo-cta { font-weight: 700; font-size: 14px; letter-spacing: .08em; text-transform: uppercase; white-space: nowrap; }
 
+/* === Volunteer === */
+.volunteer-cities { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 40px 0 8px; }
+.volunteer-city { background: #fff; border: 1px solid var(--line); border-top: 4px solid var(--orange); border-radius: var(--radius); padding: 24px 20px; display: flex; flex-direction: column; }
+.volunteer-city h3 { font-family: 'Bebas Neue', sans-serif; font-size: 30px; letter-spacing: 0.02em; margin: 0 0 6px; }
+.volunteer-city p { color: #555; font-size: 15px; margin: 0 0 16px; flex: 1; }
+.volunteer-form-wrap { margin: 0 auto; padding: 0; }
+.check-group { border: 0; padding: 0; margin: 0; }
+.check-group legend {
+  font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;
+  color: var(--ink); margin-bottom: 12px; padding: 0;
+}
+.contact-form em { font-style: normal; text-transform: none; letter-spacing: 0; font-weight: 500; color: #777; }
+.check-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+.contact-form label.check {
+  display: flex; align-items: center; gap: 10px;
+  background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 14px 16px; font-weight: 600; cursor: pointer;
+  transition: border-color .15s ease;
+}
+.contact-form label.check:has(input:checked) { border-color: var(--orange); color: var(--orange-deep); }
+.contact-form label.check input { width: 18px; height: 18px; padding: 0; margin: 0; accent-color: var(--orange); flex: none; }
+
 /* === Responsive === */
 @media (max-width: 900px) {
   .pillar-grid, .board-grid { grid-template-columns: 1fr; gap: 24px; }
@@ -399,12 +423,13 @@ h3 { font-size: clamp(22px, 2.4vw, 30px); }
   .event-card { grid-template-columns: 100px 1fr; gap: 20px; padding: 20px; }
   .event-day { font-size: 42px; }
   .form-row { grid-template-columns: 1fr; }
+  .volunteer-cities, .check-grid { grid-template-columns: 1fr 1fr; }
   .footer-row { grid-template-columns: 1fr; text-align: center; }
   .footer-brand { justify-content: center; }
   .footer-nav { justify-content: center; }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 1180px) {
   .primary-nav {
     position: absolute;
     top: 100%; left: 0; right: 0;
@@ -424,6 +449,9 @@ h3 { font-size: clamp(22px, 2.4vw, 30px); }
   .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
   .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
   .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+}
+
+@media (max-width: 720px) {
 
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
   .hero { min-height: 600px; }
